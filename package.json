@@ -1,0 +1,27 @@
+{
+  "name": "crow-project1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sophn11/crow-project1.git"
+  },
+  "author": "Soph",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sophn11/crow-project1/issues"
+  },
+  "homepage": "https://github.com/sophn11/crow-project1#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bower": "^1.7.9",
+    "express": "^4.14.0",
+    "moment": "^2.14.1",
+    "mongoose": "^4.5.5"
+  }
+}
