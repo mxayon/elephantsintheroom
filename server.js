@@ -27,7 +27,10 @@ app.get('/api', controllers.api.index);
 
 app.get('/api/articles', controllers.articles.index);
 
+app.post('/api/articles', controllers.articles.create);
+
 app.get('/api/articles/:articleId', controllers.articles.show);
+
 
 //////SERVER
 

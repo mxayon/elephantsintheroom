@@ -17,7 +17,16 @@ function show(req, res) {
   res.json(foundArticle);
 });
 }
+function create(req, res) {
+  db.Article.create(req.body, function(err, article) {
+    if (err) { console.log('error', err); }
+    console.log(article);
+    res.json(article);
+  });
+}
+
   module.exports = {
     index: index,
+    create: create,
     show: show
   };
