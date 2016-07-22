@@ -35,3 +35,27 @@ var articlesList = [
   mood: " "
   }
 ];
+
+
+db.Article.remove({}, function(err, books){
+      console.log('removed all articles');
+      articlesList.forEach(function (articleData) {
+        var article = new db.Article({
+          articleUrl: articleData.articleUrl,
+          title: articleData.title,
+          imageUrl: articleData.imageUrl,
+          author: articleData.author,
+          location: articleData.location,
+          date: articleData.date,
+          source: articleData.source,
+          people: articleData.people,
+          mood: articleData.mood
+        });
+          article.save(function(err, savedArticle){
+            if (err) {
+              return console.log(err);
+            }
+            console.log('saved ' + savedArticle.title);
+          });
+        });
+      });

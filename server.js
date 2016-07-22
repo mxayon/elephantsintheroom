@@ -25,7 +25,7 @@ app.get('/', function homepage (req, res) {
 /////JSON API ENDPOINTS
 app.get('/api', controllers.api.index);
 
-// app.get('/api/articles', controllers.articles.index);
+app.get('/api/articles', controllers.articles.index);
 
 //////SERVER
 
