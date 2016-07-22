@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/crow");
+mongoose.connect("mongodb://localhost/crow-project1");
 
 module.exports.Article = require('./article.js');
 

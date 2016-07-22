@@ -13,19 +13,21 @@ app.use(bodyParser.urlencoded({ extended : true }));
 // We're placing these under /vendor to differentiate them from our own assets
 app.use('/vendor', express.static(__dirname + '/bower_components'));
 
+var controllers = require('./controllers');
 
+////ROUTES
+
+////HTML END POINTS
 app.get('/', function homepage (req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
-app.get('/', function(req, res) {
-  res.send('Hello World!');
-});
+/////JSON API ENDPOINTS
+app.get('/api', controllers.api.index);
 
+// app.get('/api/articles', controllers.articles.index);
 
-/**********
- * SERVER *
- **********/
+//////SERVER
 
 // listen on port 3000
 app.listen(process.env.PORT || 3000, function () {

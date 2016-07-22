@@ -9,3 +9,8 @@ function index(req, res) {
     res.json(allArticles);
   });
   }
+
+
+  module.exports = {
+    index: index
+  };
