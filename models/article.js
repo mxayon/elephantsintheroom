@@ -1,5 +1,5 @@
-var mongoose = require('mongoose'),
-  Schema = mongoose.Schema;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
 var ArticleSchema = new Schema ({
   articleUrl: String,
@@ -10,7 +10,7 @@ var ArticleSchema = new Schema ({
   date: String,
   source: String,
   people: String,
-  mood: String
+  compassionScale: String
 });
 
 

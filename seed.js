@@ -10,7 +10,7 @@ var articlesList = [
   date: " ",
   source: " ",
   people: " ",
-  mood: " "
+  compassionScale: " "
   },
   {
   articleUrl: "To Kill a Mockingbird",
@@ -21,7 +21,7 @@ var articlesList = [
   date: " ",
   source: " ",
   people: " ",
-  mood: " "
+  compassionScale: " "
   },
   {
   articleUrl: "To Kill a Mockingbird",
@@ -32,7 +32,7 @@ var articlesList = [
   date: " ",
   source: " ",
   people: " ",
-  mood: " "
+  compassionScale: " "
   }
 ];
 
@@ -49,7 +49,7 @@ db.Article.remove({}, function(err, books){
           date: articleData.date,
           source: articleData.source,
           people: articleData.people,
-          mood: articleData.mood
+          compassionScale: articleData.compassionScale
         });
           article.save(function(err, savedArticle){
             if (err) {
