@@ -31,6 +31,8 @@ app.post('/api/articles', controllers.articles.create);
 
 app.get('/api/articles/:articleId', controllers.articles.show);
 
+app.delete('/api/articles/:articleId', controllers.articles.destroy);
+
 
 //////SERVER
 
