@@ -27,6 +27,8 @@ app.get('/api', controllers.api.index);
 
 app.get('/api/articles', controllers.articles.index);
 
+app.get('/api/articles/:articleId', controllers.articles.show);
+
 //////SERVER
 
 // listen on port 3000

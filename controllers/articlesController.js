@@ -10,7 +10,14 @@ function index(req, res) {
   });
   }
 
-
+function show(req, res) {
+  db.Article.findById(req.params.articleId, function(err, foundArticle) {
+  if(err) { console.log('articlesController.show error', err); }
+  console.log('articlesController.show responding with', foundArticle);
+  res.json(foundArticle);
+});
+}
   module.exports = {
-    index: index
+    index: index,
+    show: show
   };
