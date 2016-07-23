@@ -64,19 +64,23 @@ db.TagWord.remove({},function RemoveTags(err, succ) {
   console.log("Removed tags...");
 });
 
-db.TagWord.create(tagWordsList, function(err, createdTagWords) {
-  if(err){return console.log("ERROR: ", err);}
-  console.log(createdTagWords);
+db.Article.remove({}, function RemoveArticles(err, succ) {
+  if (err) {console.log(err);}
+  console.log("Cleaned out Articles!!!");
 });
 
-db.ArticleTagWord.remove({}, function(err, succ) {
+db.ArticleTagWord.remove({}, function RemoveArticleTagWord(err, succ) {
   if (err) {console.log(err);}
   console.log("Cleaned out ArticleTagWords!!!");
 });
 
-
-db.Article.remove({}, function(err, books){
-      console.log('removed all articles');
+db.TagWord.create(tagWordObj0, function(err, tagWordSuccess) {
+  if(err){console.log("ERROR: ", err);}
+  console.log("Created TagWord!");
+///////////create articles
+  db.Article.create(articlesList, function(err, articles) {
+    if (err) {console.log(err);}
+    console.log("Created Articles");
       articlesList.forEach(function (articleData) {
         var article = new db.Article({
           articleUrl: articleData.articleUrl,
@@ -86,7 +90,6 @@ db.Article.remove({}, function(err, books){
           location: articleData.location,
           date: articleData.date,
           source: articleData.source,
-          people: articleData.people,
           compassionScale: articleData.compassionScale
         });
           article.save(function(err, savedArticle){
@@ -95,5 +98,72 @@ db.Article.remove({}, function(err, books){
             }
             console.log('saved ' + savedArticle.title);
           });
+      });
+//////////////for each article join table
+      articles.forEach(function(article) {
+      var joinTableData = {
+        _article: article._id,
+        _tagWord: tagWordSuccess._id
+      };
+      db.ArticleTagWord.create(joinTableData, function(err, suc) {
+        if (err) {console.log(err);}
+
+        console.log("Created Join Table Entry: ");
+        console.log(suc + '\n');
         });
       });
+      db.ArticleTagWord.find({}, function(err, suc) {
+        if (err) {console.log(err);}
+        console.log("ALL JOINS: " ,suc);
+      });
+/////// tag word obj3
+      db.TagWord.create(tagWordObj3, function handleNewTagWord(err, tagWordCommunication){
+        if (err) {console.log(err);}
+        console.log("Tag Word - Communication created.");
+
+        db.Article.findOne({title: "The Harvard Law Documentary Studio"}, function(err, theHarvardLawDocumentaryStudio) {
+          db.ArticleTagWord.create({_article: theHarvardLawDocumentaryStudio._id,
+          _tagWord: tagWordCommunication._id}, function secondJoinMade(err,success){
+            if (err) {console.log(err);}
+            console.log(success);
+          });
+        });
+
+      });
+      db.Article.findOne({title: "The Harvard Law Documentary Studio"}, function(err, theHarvardLawDocumentaryStudio) {
+
+        db.ArticleTagWord.find({article: theHarvardLawDocumentaryStudio._id}, function allTheHarvardLawDocumentaryStudio(err,success){
+          if (err) {console.log(err);}
+          console.log(success.length);
+          success.forEach(function(joinEntity){
+            console.log("SEARCHING WITH : " + joinEntity._tagWord);
+            db.TagWord.findById(joinEntity._tagWord, function(err,succ) {
+              console.log(succ.name);
+            });
+          });
+        });
+
+      });
+
+  });
+
+  /*  depopulate and return instructors */
+  // db.TagWord.findOne({
+  //     name: 'Communication'
+  //   },
+  //   function(err, succ) {
+  //     db.ArticleTagWord.find({
+  //         tagWordId: succ._id
+  //       })
+  //       .populate('articleId')
+  //       .exec(function(err, articles) {
+  //         if (err) {console.log(err);}
+  //         instructors.forEach( function(el) {
+  //           console.log(el.articleId.title);
+  //         });
+  //       });
+  //   });
+
+
+
+});
