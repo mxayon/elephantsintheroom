@@ -33,35 +33,32 @@ var articlesList = [
   }
 ];
 
-var tagWordsList = [
-  {
-    name: "Things that need to be changed"
-  },
-  {
-    name: "World Refugee Crisis"
-  },
-  {
-    name: "Civil Liberties"
-  },
-  {
-    name: "Communication"
-  },
-  {
-    name: "Culture"
-  },
-  {
-    name: "Connection"
-  },
-  {
-    name: "Tech And Web Development"
-  },
-  {
-    name: "Documentaries"
-  },
-  {
-    name: " "
-  }
-];
+
+var tagWordObj0 = {
+  name: "The Big Elephants and Current Issues"
+};
+var tagWordObj1 = {
+  name: "Human Rights and Civil Liberties"
+};
+var tagWordObj2 = {
+  name: "Global Crisis"
+};
+var tagWordObj3 = {
+  name: "Communication"
+};
+var tagWordObj4 = {
+  name: "Culture"
+};
+var tagWordObj5 = {
+  name: "Connection"
+};
+var tagWordObj6 = {
+  name: "Tech And Web Development"
+};
+var tagWordObj7 = {
+  name: "Documentaries"
+};
+
 
 db.TagWord.remove({},function RemoveTags(err, succ) {
   console.log("Removed tags...");
@@ -70,6 +67,11 @@ db.TagWord.remove({},function RemoveTags(err, succ) {
 db.TagWord.create(tagWordsList, function(err, createdTagWords) {
   if(err){return console.log("ERROR: ", err);}
   console.log(createdTagWords);
+});
+
+db.ArticleTagWord.remove({}, function(err, succ) {
+  if (err) {console.log(err);}
+  console.log("Cleaned out ArticleTagWords!!!");
 });
 
 
