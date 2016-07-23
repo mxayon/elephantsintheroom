@@ -39,12 +39,13 @@ app.put('/api/articles/:articleId', controllers.articles.update);
 
 app.get('/api/tagWords', controllers.tagWords.index);
 
-app.get('/api/tagWords', controllers.tagWords.show);
+app.get('/api/tagWords/:tagWordId', controllers.tagWords.show);
 
 app.post('/api/tagWords', controllers.tagWords.create);
 
 app.delete('/api/tagWords/:tagWordId', controllers.tagWords.destroy);
 
+app.put('/api/tagWords/:tagWordId', controllers.tagWords.update);
 
 //////SERVER
 

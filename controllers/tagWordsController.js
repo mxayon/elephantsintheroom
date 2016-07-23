@@ -7,8 +7,8 @@ function index(req, res) {
       return;
     }
     res.json(allTagWords);
-  });
-  }
+});
+}
 
 function show(req, res) {
   db.TagWord.findById(req.params.tagWordId, function(err, foundTagWord) {
@@ -30,8 +30,21 @@ function destroy(req, res) {
   db.TagWord.findOneAndRemove({ _id: req.params.tagWordId }, function(err, foundTagWord){
   console.log("destroyed album : ", foundTagWord);
   res.json(foundTagWord);
-  });
-  }
+});
+}
+
+function update(req, res) {
+  db.TagWord.findById(req.params.tagWordId, function(err, foundTagWord) {
+  if (err) { console.log('error', err); }
+  console.log(req.body);
+  foundTagWord.name=req.body.name,
+  foundTagWord.save(function(err, updatedTagWord) {
+  if (err) {
+   console.log("create error: " + err);
+  } res.json(updatedTagWord);
+ });
+});
+}
 
 
 
@@ -39,5 +52,6 @@ module.exports = {
   index: index,
   show: show,
   create: create,
-  destroy: destroy
+  destroy: destroy,
+  update: update
 };
