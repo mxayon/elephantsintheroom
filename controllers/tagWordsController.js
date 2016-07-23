@@ -9,6 +9,7 @@ function index(req, res) {
     res.json(allTagWords);
   });
   }
+
 function show(req, res) {
   db.TagWord.findById(req.params.tagWordId, function(err, foundTagWord) {
   if(err) { console.log('tagWordsController.show error', err); }
@@ -25,10 +26,18 @@ function create(req, res) {
 });
 }
 
+function destroy(req, res) {
+  db.TagWord.findOneAndRemove({ _id: req.params.tagWordId }, function(err, foundTagWord){
+  console.log("destroyed album : ", foundTagWord);
+  res.json(foundTagWord);
+  });
+  }
+
 
 
 module.exports = {
   index: index,
+  show: show,
   create: create,
-  show: show
+  destroy: destroy
 };

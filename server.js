@@ -43,6 +43,8 @@ app.get('/api/tagWords', controllers.tagWords.show);
 
 app.post('/api/tagWords', controllers.tagWords.create);
 
+app.delete('/api/tagWords/:tagWordId', controllers.tagWords.destroy);
+
 
 //////SERVER
 

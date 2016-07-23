@@ -38,12 +38,11 @@ function update(req, res) {
       console.log(req.body);
       foundArticle.articleUrl=req.body.articleUrl,
       foundArticle.title=req.body.title,
+      foundArticle.description=req.body.description,
       foundArticle.imageUrl=req.body.imageUrl,
       foundArticle.author=req.body.author,
       foundArticle.location=req.body.location,
       foundArticle.date=req.body.date,
-      foundArticle.source=req.body.source,
-      foundArticle.people=req.body.people,
       foundArticle.compassionScale=req.body.compassionScale,
       foundArticle.save(function(err, updatedArticle){
         if (err) {

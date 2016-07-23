@@ -4,23 +4,21 @@ var articlesList = [
   {
   articleUrl: " ",
   title: " ",
+  description: " ",
   imageUrl: " ",
   author: " ",
   location: " ",
   date: " ",
-  source: " ",
-  people: " ",
   compassionScale: " "
   },
   {
   articleUrl: " ",
   title: " ",
-  image_url: " ",
+  description: " ",
+  imageUrl: " ",
   author: " ",
   location: " ",
   date: " ",
-  source: " ",
-  people: " ",
   compassionScale: " "
   },
   {
