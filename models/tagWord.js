@@ -5,7 +5,7 @@ var Article = require('./article');
 var ArticleTagWord = require('./articleTagWord');
 
 var TagWordSchema = new Schema({
-  name: String,
+  name: String
 });
 
 

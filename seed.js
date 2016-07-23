@@ -2,10 +2,10 @@ var db = require('./models');
 
 var articlesList = [
   {
-  articleUrl: "To Kill a Mockingbird",
-  title: "Harper Lee",
-  imageUrl: "https://s3-us-west-2.amazonaws.com/sandboxapi/to_kill_a_mockingbird.jpg",
-  author: "July 11, 1960",
+  articleUrl: " ",
+  title: " ",
+  imageUrl: " ",
+  author: " ",
   location: " ",
   date: " ",
   source: " ",
@@ -13,10 +13,10 @@ var articlesList = [
   compassionScale: " "
   },
   {
-  articleUrl: "To Kill a Mockingbird",
-  title: "Harper Lee",
-  image_url: "https://s3-us-west-2.amazonaws.com/sandboxapi/to_kill_a_mockingbird.jpg",
-  author: "July 11, 1960",
+  articleUrl: " ",
+  title: " ",
+  image_url: " ",
+  author: " ",
   location: " ",
   date: " ",
   source: " ",
@@ -24,17 +24,55 @@ var articlesList = [
   compassionScale: " "
   },
   {
-  articleUrl: "To Kill a Mockingbird",
-  title: "Harper Lee",
-  imageUrl: "https://s3-us-west-2.amazonaws.com/sandboxapi/to_kill_a_mockingbird.jpg",
-  author: "July 11, 1960",
+  articleUrl: "https://orgs.law.harvard.edu/docstudio/films/",
+  title: "The Harvard Law Documentary Studio",
+  description: "The Harvard Law Documentary Studio aims to produce original documentaries that explore social and policy issues.",
+  imageUrl: "https://orgs.law.harvard.edu/docstudio/",
+  author: " ",
   location: " ",
   date: " ",
-  source: " ",
-  people: " ",
   compassionScale: " "
   }
 ];
+
+var tagWordsList = [
+  {
+    name: "Things that need to be changed"
+  },
+  {
+    name: "World Refugee Crisis"
+  },
+  {
+    name: "Civil Liberties"
+  },
+  {
+    name: "Communication"
+  },
+  {
+    name: "Culture"
+  },
+  {
+    name: "Connection"
+  },
+  {
+    name: "Tech And Web Development"
+  },
+  {
+    name: "Documentaries"
+  },
+  {
+    name: " "
+  }
+];
+
+db.TagWord.remove({},function RemoveTags(err, succ) {
+  console.log("Removed tags...");
+});
+
+db.TagWord.create(tagWordsList, function(err, createdTagWords) {
+  if(err){return console.log("ERROR: ", err);}
+  console.log(createdTagWords);
+});
 
 
 db.Article.remove({}, function(err, books){
