@@ -41,6 +41,8 @@ app.get('/api/tagWords', controllers.tagWords.index);
 
 app.get('/api/tagWords', controllers.tagWords.show);
 
+app.post('/api/tagWords', controllers.tagWords.create);
+
 
 //////SERVER
 

@@ -17,7 +17,18 @@ function show(req, res) {
 });
 }
 
+function create(req, res) {
+  db.TagWord.create(req.body, function(err, tagWord) {
+  if (err) { console.log('error', err); }
+  console.log(tagWord);
+  res.json(tagWord);
+});
+}
+
+
+
 module.exports = {
   index: index,
+  create: create,
   show: show
 };
