@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,468 +18,488 @@
 
     <!-- APPLICATION SCRIPTS -->
     <script src="scripts/app.js"></script>
-  </head>
-  <body>
 
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+</head>
 
-    <div id="wrapper">
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
-            <!-- Sidebar -->
-            <div id="sidebar-wrapper">
-                <nav id="spy">
-                    <ul class="sidebar-nav col-md-2 nav">
-                        <li class="sidebar-brand">
-                            <a href="#home"><span class="fa fa-home solo">Home</span></a>
-                        </li>
-                        <li>
-                            <a href="#anch1" data-scroll>
-                                <span class="fa fa-anchor solo">Anchor 1</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#anch2" data-scroll>
-                                <span class="fa fa-anchor solo">Anchor 2</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#anch3" data-scroll>
-                                <span class="fa fa-anchor solo">Anchor 3</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#anch4" data-scroll>
-                                <span class="fa fa-anchor solo">Anchor 4</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Elephant in the Room</a>
             </div>
 
-            <!-- Page content -->
-            <div id="page-content-wrapper">
-                <div class="content-header">
-                    <h1 id="home">
-                        <a id="menu-toggle" href="#" class="glyphicon glyphicon-align-justify btn-menu toggle">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                         News and Articles
-                    </h1>
-                </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">Big Elephants and Current Issues</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Communication</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Culture</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#connectionNav">Connection</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#addArticle">Add An Article</a>
+                    </li>
 
-                <div class="page-content inset" data-spy="scroll" data-target="#spy">
-                    <div class="row">
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
 
-      <!-- ///////////// JUMBO TRON STart//////// -->
+                    <!-- ///////////// JUMBO TRON STart//////// -->
 
-                      <div class="jumbotron text-center">
+                    <div class="jumbotron text-center">
                         <div class="container">
                             <h1>Elephant in the Room </h1>
-                            <p></p>
-                            <p><a class="btn btn-default">Click On Me!</a>
-                            <a class="btn btn-info">Tweet Me!</a></p>
-                          </div>
-                      </div>
-
-
-<!-- /////jumbo tron end ////// -->
-
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 well">
-                            <legend id="anch1">Anchor 1</legend>
-
-                            <div class="container">
-                              <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
-
-                                  <div class="item active">
-                                    <img src="http://placehold.it/760x400/cccccc/ffffff">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">Lorem ipsum dolor sit amet consetetur sadipscing</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                   <div class="item">
-                                    <img src="http://placehold.it/760x400/999999/cccccc">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">consetetur sadipscing elitr, sed diam nonumy eirmod</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                  <div class="item">
-                                    <img src="http://placehold.it/760x400/dddddd/333333">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">tempor invidunt ut labore et dolore</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                  <div class="item">
-                                    <img src="http://placehold.it/760x400/999999/cccccc">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">magna aliquyam erat, sed diam voluptua</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                  <div class="item">
-                                    <img src="http://placehold.it/760x400/dddddd/333333">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">tempor invidunt ut labore et dolore magna aliquyam erat</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                </div><!-- End Carousel Inner -->
-
-
-                              <ul class="list-group col-sm-4">
-                                <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Lorem ipsum dolor sit amet consetetur sadipscing</h4></li>
-                                <li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>consetetur sadipscing elitr, sed diam nonumy eirmod</h4></li>
-                                <li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>tempor invidunt ut labore et dolore</h4></li>
-                                <li data-target="#myCarousel" data-slide-to="3" class="list-group-item"><h4>magna aliquyam erat, sed diam voluptua</h4></li>
-                                <li data-target="#myCarousel" data-slide-to="4" class="list-group-item"><h4>tempor invidunt ut labore et dolore magna aliquyam erat</h4></li>
-                              </ul>
-
-                                <!-- Controls -->
-                                <div class="carousel-controls">
-                                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                                      <span class="glyphicon glyphicon-chevron-left"></span>
-                                    </a>
-                                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                                      <span class="glyphicon glyphicon-chevron-right"></span>
-                                    </a>
-                                </div>
-
-                              </div><!-- End Carousel -->
-                            </div>
-                            <!-- //////////end carousel  -->
-
-                        </div>
-                        <div class="col-md-12 well">
-                            <legend id="anch2">Anchor 2</legend>
-
-                            <div class="container">
-                              <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
-
-                                  <div class="item active">
-                                    <img src="http://placehold.it/760x400/cccccc/ffffff">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">Lorem ipsum dolor sit amet consetetur sadipscing</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                   <div class="item">
-                                    <img src="http://placehold.it/760x400/999999/cccccc">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">consetetur sadipscing elitr, sed diam nonumy eirmod</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                  <div class="item">
-                                    <img src="http://placehold.it/760x400/dddddd/333333">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">tempor invidunt ut labore et dolore</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                  <div class="item">
-                                    <img src="http://placehold.it/760x400/999999/cccccc">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">magna aliquyam erat, sed diam voluptua</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                  <div class="item">
-                                    <img src="http://placehold.it/760x400/dddddd/333333">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">tempor invidunt ut labore et dolore magna aliquyam erat</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                </div><!-- End Carousel Inner -->
-
-
-                              <ul class="list-group col-sm-4">
-                                <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Lorem ipsum dolor sit amet consetetur sadipscing</h4></li>
-                                <li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>consetetur sadipscing elitr, sed diam nonumy eirmod</h4></li>
-                                <li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>tempor invidunt ut labore et dolore</h4></li>
-                                <li data-target="#myCarousel" data-slide-to="3" class="list-group-item"><h4>magna aliquyam erat, sed diam voluptua</h4></li>
-                                <li data-target="#myCarousel" data-slide-to="4" class="list-group-item"><h4>tempor invidunt ut labore et dolore magna aliquyam erat</h4></li>
-                              </ul>
-
-                                <!-- Controls -->
-                                <div class="carousel-controls">
-                                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                                      <span class="glyphicon glyphicon-chevron-left"></span>
-                                    </a>
-                                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                                      <span class="glyphicon glyphicon-chevron-right"></span>
-                                    </a>
-                                </div>
-
-                              </div><!-- End Carousel -->
-                            </div>
-                            <!-- //////////end carousel  -->
-                        </div>
-                        <div class="col-md-12 well">
-                            <legend id="anch3">Anchor 3</legend>
-
-                            <div class="container">
-                              <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
-
-                                  <div class="item active">
-                                    <img src="http://placehold.it/760x400/cccccc/ffffff">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">Lorem ipsum dolor sit amet consetetur sadipscing</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                   <div class="item">
-                                    <img src="http://placehold.it/760x400/999999/cccccc">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">consetetur sadipscing elitr, sed diam nonumy eirmod</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                  <div class="item">
-                                    <img src="http://placehold.it/760x400/dddddd/333333">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">tempor invidunt ut labore et dolore</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                  <div class="item">
-                                    <img src="http://placehold.it/760x400/999999/cccccc">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">magna aliquyam erat, sed diam voluptua</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                  <div class="item">
-                                    <img src="http://placehold.it/760x400/dddddd/333333">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">tempor invidunt ut labore et dolore magna aliquyam erat</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                </div><!-- End Carousel Inner -->
-
-
-                              <ul class="list-group col-sm-4">
-                                <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Lorem ipsum dolor sit amet consetetur sadipscing</h4></li>
-                                <li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>consetetur sadipscing elitr, sed diam nonumy eirmod</h4></li>
-                                <li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>tempor invidunt ut labore et dolore</h4></li>
-                                <li data-target="#myCarousel" data-slide-to="3" class="list-group-item"><h4>magna aliquyam erat, sed diam voluptua</h4></li>
-                                <li data-target="#myCarousel" data-slide-to="4" class="list-group-item"><h4>tempor invidunt ut labore et dolore magna aliquyam erat</h4></li>
-                              </ul>
-
-                                <!-- Controls -->
-                                <div class="carousel-controls">
-                                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                                      <span class="glyphicon glyphicon-chevron-left"></span>
-                                    </a>
-                                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                                      <span class="glyphicon glyphicon-chevron-right"></span>
-                                    </a>
-                                </div>
-
-                              </div><!-- End Carousel -->
-                            </div>
-                            <!-- //////////end carousel  -->
-                        </div>
-                        <div class="col-md-12 well">
-                            <legend id="anch4">Anchor 4</legend>
-
-                            <div class="container">
-                              <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
-
-                                  <div class="item active">
-                                    <img src="http://placehold.it/760x400/cccccc/ffffff">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">Lorem ipsum dolor sit amet consetetur sadipscing</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                   <div class="item">
-                                    <img src="http://placehold.it/760x400/999999/cccccc">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">consetetur sadipscing elitr, sed diam nonumy eirmod</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                  <div class="item">
-                                    <img src="http://placehold.it/760x400/dddddd/333333">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">tempor invidunt ut labore et dolore</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                  <div class="item">
-                                    <img src="http://placehold.it/760x400/999999/cccccc">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">magna aliquyam erat, sed diam voluptua</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                  <div class="item">
-                                    <img src="http://placehold.it/760x400/dddddd/333333">
-                                     <div class="carousel-caption">
-                                      <h4><a href="#">tempor invidunt ut labore et dolore magna aliquyam erat</a></h4>
-                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
-                                    </div>
-                                  </div><!-- End Item -->
-
-                                </div><!-- End Carousel Inner -->
-
-
-                              <ul class="list-group col-sm-4">
-                                <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Lorem ipsum dolor sit amet consetetur sadipscing</h4></li>
-                                <li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>consetetur sadipscing elitr, sed diam nonumy eirmod</h4></li>
-                                <li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>tempor invidunt ut labore et dolore</h4></li>
-                                <li data-target="#myCarousel" data-slide-to="3" class="list-group-item"><h4>magna aliquyam erat, sed diam voluptua</h4></li>
-                                <li data-target="#myCarousel" data-slide-to="4" class="list-group-item"><h4>tempor invidunt ut labore et dolore magna aliquyam erat</h4></li>
-                              </ul>
-
-                                <!-- Controls -->
-                                <div class="carousel-controls">
-                                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                                      <span class="glyphicon glyphicon-chevron-left"></span>
-                                    </a>
-                                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                                      <span class="glyphicon glyphicon-chevron-right"></span>
-                                    </a>
-                                </div>
-
-                              </div><!-- End Carousel -->
-                            </div>
-                            <!-- //////////end carousel  -->
+                            <h5>: an <strong>obvious major problem</strong> or issue that people avoid discussing or acknowledging</h5>
                         </div>
                     </div>
 
-                    <div class="navbar navbar-default navbar-static-bottom">
-                        <p class="navbar-text pull-left">
-                            Built by <a href="http://mvnguyen.com" target="_blank">Michael V Nguyen
-                        </p>
-                    </div>
+                    <p> <a class="btn btn-default page-scroll" href="#about">Big Elephants</a></p>
+                    <!-- /////jumbo tron end ////// -->
+
+
+
+
+
+
+
+
+
+
+
                 </div>
-
             </div>
-
         </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Current Issues</h1>
+
+                    <div class="container">
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+
+                                <div class="item active">
+                                    <img src="http://placehold.it/760x400/cccccc/ffffff">
+                                    <div class="carousel-caption">
+                                        <h4><a href="#">Lorem ipsum dolor sit amet consetetur sadipscing</a></h4>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                                    </div>
+                                </div>
+                                <!-- End Item -->
+
+                                <div class="item">
+                                    <img src="http://placehold.it/760x400/999999/cccccc">
+                                    <div class="carousel-caption">
+                                        <h4><a href="#">consetetur sadipscing elitr, sed diam nonumy eirmod</a></h4>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                                    </div>
+                                </div>
+                                <!-- End Item -->
+
+                                <div class="item">
+                                    <img src="http://placehold.it/760x400/dddddd/333333">
+                                    <div class="carousel-caption">
+                                        <h4><a href="#">tempor invidunt ut labore et dolore</a></h4>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                                    </div>
+                                </div>
+                                <!-- End Item -->
+
+                                <div class="item">
+                                    <img src="http://placehold.it/760x400/999999/cccccc">
+                                    <div class="carousel-caption">
+                                        <h4><a href="#">magna aliquyam erat, sed diam voluptua</a></h4>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                                    </div>
+                                </div>
+                                <!-- End Item -->
+
+                                <div class="item">
+                                    <img src="http://placehold.it/760x400/dddddd/333333">
+                                    <div class="carousel-caption">
+                                        <h4><a href="#">tempor invidunt ut labore et dolore magna aliquyam erat</a></h4>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                                    </div>
+                                </div>
+                                <!-- End Item -->
+
+                            </div>
+                            <!-- End Carousel Inner -->
+
+
+                            <ul class="list-group col-sm-4">
+                                <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active">
+                                    <h4>Lorem ipsum dolor sit amet consetetur sadipscing</h4></li>
+                                <li data-target="#myCarousel" data-slide-to="1" class="list-group-item">
+                                    <h4>consetetur sadipscing elitr, sed diam nonumy eirmod</h4></li>
+                                <li data-target="#myCarousel" data-slide-to="2" class="list-group-item">
+                                    <h4>tempor invidunt ut labore et dolore</h4></li>
+                                <li data-target="#myCarousel" data-slide-to="3" class="list-group-item">
+                                    <h4>magna aliquyam erat, sed diam voluptua</h4></li>
+                                <li data-target="#myCarousel" data-slide-to="4" class="list-group-item">
+                                    <h4>tempor invidunt ut labore et dolore magna aliquyam erat</h4></li>
+                            </ul>
+
+                            <!-- Controls -->
+                            <div class="carousel-controls">
+                                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- End Carousel -->
+                    </div>
+                    <!-- //////////end carousel  -->
 
 
 
-<!-- ////////////////// accordion END -->
+
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-<!-- /////form with jaquery  -->
+    <!-- /////////// Communication -->
 
-<div class="container">
-    <div class="row clearfix">
-    	<div class="col-md-12 table-responsive">
-			<table class="table table-bordered table-hover table-sortable" id="tab_logic">
-				<thead>
-					<tr >
-						<th class="text-center">
-							Name
-						</th>
-						<th class="text-center">
-							Email
-						</th>
-						<th class="text-center">
-							Notes
-						</th>
-    					<th class="text-center">
-							Option
-						</th>
-        				<th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;">
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-    				<tr id='addr0' data-id="0" class="hidden">
-						<td data-name="name">
-						    <input type="text" name='name0'  placeholder='Name' class="form-control"/>
-						</td>
-						<td data-name="mail">
-						    <input type="text" name='mail0' placeholder='Email' class="form-control"/>
-						</td>
-						<td data-name="desc">
-						    <textarea name="desc0" placeholder="Description" class="form-control"></textarea>
-						</td>
-    					<td data-name="sel">
-						    <select name="sel0">
-        				        <option value"">Select Option</option>
-    					        <option value"1">Option 1</option>
-        				        <option value"2">Option 2</option>
-        				        <option value"3">Option 3</option>
-						    </select>
-						</td>
-                        <td data-name="del">
-                            <button nam"del0" class='btn btn-danger glyphicon glyphicon-remove row-remove'></button>
-                        </td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</div>
-	<a id="add_row" class="btn btn-default pull-right">Add Row</a>
-</div>
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Communication</h1>
 
-<!-- /////// end form with jaquery  -->
+                    <div class="container">
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+
+                                <div class="item active">
+                                    <img src="http://placehold.it/760x400/cccccc/ffffff">
+                                    <div class="carousel-caption">
+                                        <h4><a href="#">Lorem ipsum dolor sit amet consetetur sadipscing</a></h4>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                                    </div>
+                                </div>
+                                <!-- End Item -->
+
+                                <div class="item">
+                                    <img src="http://placehold.it/760x400/999999/cccccc">
+                                    <div class="carousel-caption">
+                                        <h4><a href="#">consetetur sadipscing elitr, sed diam nonumy eirmod</a></h4>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                                    </div>
+                                </div>
+                                <!-- End Item -->
+
+                                <div class="item">
+                                    <img src="http://placehold.it/760x400/dddddd/333333">
+                                    <div class="carousel-caption">
+                                        <h4><a href="#">tempor invidunt ut labore et dolore</a></h4>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                                    </div>
+                                </div>
+                                <!-- End Item -->
+
+                                <div class="item">
+                                    <img src="http://placehold.it/760x400/999999/cccccc">
+                                    <div class="carousel-caption">
+                                        <h4><a href="#">magna aliquyam erat, sed diam voluptua</a></h4>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                                    </div>
+                                </div>
+                                <!-- End Item -->
+
+                                <div class="item">
+                                    <img src="http://placehold.it/760x400/dddddd/333333">
+                                    <div class="carousel-caption">
+                                        <h4><a href="#">tempor invidunt ut labore et dolore magna aliquyam erat</a></h4>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                                    </div>
+                                </div>
+                                <!-- End Item -->
+
+                            </div>
+                            <!-- End Carousel Inner -->
+
+
+                            <ul class="list-group col-sm-4">
+                                <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active">
+                                    <h4>Lorem ipsum dolor sit amet consetetur sadipscing</h4></li>
+                                <li data-target="#myCarousel" data-slide-to="1" class="list-group-item">
+                                    <h4>consetetur sadipscing elitr, sed diam nonumy eirmod</h4></li>
+                                <li data-target="#myCarousel" data-slide-to="2" class="list-group-item">
+                                    <h4>tempor invidunt ut labore et dolore</h4></li>
+                                <li data-target="#myCarousel" data-slide-to="3" class="list-group-item">
+                                    <h4>magna aliquyam erat, sed diam voluptua</h4></li>
+                                <li data-target="#myCarousel" data-slide-to="4" class="list-group-item">
+                                    <h4>tempor invidunt ut labore et dolore magna aliquyam erat</h4></li>
+                            </ul>
+
+                            <!-- Controls -->
+                            <div class="carousel-controls">
+                                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- End Carousel -->
+                    </div>
+                    <!-- //////////end carousel  -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- /////// culture  -->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Culture</h1>
+
+                    <div class="container">
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+
+                                <div class="item active">
+                                    <img src="http://placehold.it/760x400/cccccc/ffffff">
+                                    <div class="carousel-caption">
+                                        <h4><a href="#">Lorem ipsum dolor sit amet consetetur sadipscing</a></h4>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                                    </div>
+                                </div>
+                                <!-- End Item -->
+
+                                <div class="item">
+                                    <img src="http://placehold.it/760x400/999999/cccccc">
+                                    <div class="carousel-caption">
+                                        <h4><a href="#">consetetur sadipscing elitr, sed diam nonumy eirmod</a></h4>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                                    </div>
+                                </div>
+                                <!-- End Item -->
+
+                                <div class="item">
+                                    <img src="http://placehold.it/760x400/dddddd/333333">
+                                    <div class="carousel-caption">
+                                        <h4><a href="#">tempor invidunt ut labore et dolore</a></h4>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                                    </div>
+                                </div>
+                                <!-- End Item -->
+
+                                <div class="item">
+                                    <img src="http://placehold.it/760x400/999999/cccccc">
+                                    <div class="carousel-caption">
+                                        <h4><a href="#">magna aliquyam erat, sed diam voluptua</a></h4>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                                    </div>
+                                </div>
+                                <!-- End Item -->
+
+                                <div class="item">
+                                    <img src="http://placehold.it/760x400/dddddd/333333">
+                                    <div class="carousel-caption">
+                                        <h4><a href="#">tempor invidunt ut labore et dolore magna aliquyam erat</a></h4>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                                    </div>
+                                </div>
+                                <!-- End Item -->
+
+                            </div>
+                            <!-- End Carousel Inner -->
+
+
+                            <ul class="list-group col-sm-4">
+                                <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active">
+                                    <h4>Lorem ipsum dolor sit amet consetetur sadipscing</h4></li>
+                                <li data-target="#myCarousel" data-slide-to="1" class="list-group-item">
+                                    <h4>consetetur sadipscing elitr, sed diam nonumy eirmod</h4></li>
+                                <li data-target="#myCarousel" data-slide-to="2" class="list-group-item">
+                                    <h4>tempor invidunt ut labore et dolore</h4></li>
+                                <li data-target="#myCarousel" data-slide-to="3" class="list-group-item">
+                                    <h4>magna aliquyam erat, sed diam voluptua</h4></li>
+                                <li data-target="#myCarousel" data-slide-to="4" class="list-group-item">
+                                    <h4>tempor invidunt ut labore et dolore magna aliquyam erat</h4></li>
+                            </ul>
+
+                            <!-- Controls -->
+                            <div class="carousel-controls">
+                                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- End Carousel -->
+                    </div>
+                    <!-- //////////end carousel  -->
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!-- /////form with jaquery  -->
+
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 table-responsive">
+                <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                    <thead>
+                        <tr>
+                            <th class="text-center">
+                                Name
+                            </th>
+                            <th class="text-center">
+                                Email
+                            </th>
+                            <th class="text-center">
+                                Notes
+                            </th>
+                            <th class="text-center">
+                                Option
+                            </th>
+                            <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id='addr0' data-id="0" class="hidden">
+                            <td data-name="name">
+                                <input type="text" name='name0' placeholder='Name' class="form-control" />
+                            </td>
+                            <td data-name="mail">
+                                <input type="text" name='mail0' placeholder='Email' class="form-control" />
+                            </td>
+                            <td data-name="desc">
+                                <textarea name="desc0" placeholder="Description" class="form-control"></textarea>
+                            </td>
+                            <td data-name="sel">
+                                <select name="sel0">
+                                    <option value "">Select Option</option>
+                                    <option value "1">Option 1</option>
+                                    <option value "2">Option 2</option>
+                                    <option value "3">Option 3</option>
+                                </select>
+                            </td>
+                            <td data-name="del">
+                                <button nam "del0" class='btn btn-danger glyphicon glyphicon-remove row-remove'></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <a id="add_row" class="btn btn-default pull-right">Add Row</a>
+    </div>
+
+    <!-- /////// end form with jaquery  -->
 
 
 
 
 
     <div class="container">
-      <div id="articleTarget">
+        <div id="articleTarget">
 
-      <script id="article-template" type="text/x-handlebars-template">
+            <script id="article-template" type="text/x-handlebars-template">
 
-        <p>
-          <br>
-          TESTTTT
-          {{articleUrl}}
-          <br>
-          {{title}}
-          <br>
-          {{description}}
-          <br>
-        </p>
-        <img src="{{imageUrl}}">
+                <p>
+                    <br> TESTTTT {{articleUrl}}
+                    <br> {{title}}
+                    <br> {{description}}
+                    <br>
+                </p>
+                <img src="{{imageUrl}}">
 
-      </script>
+            </script>
+        </div>
     </div>
-  </div>
-  </body>
+</body>
+
 </html>

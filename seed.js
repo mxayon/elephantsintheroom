@@ -2,19 +2,19 @@ var db = require('./models');
 
 var articlesList = [
   {
-  articleUrl: " ",
-  title: " ",
-  description: " ",
-  imageUrl: " ",
-  author: " ",
-  location: " ",
-  date: " ",
+  articleUrl: "http://motherboard.vice.com/read/scientists-made-a-new-map-of-the-human-brain-cerebral-cortex",
+  title: "Scientists Made a New Map of the Human Brain",
+  description: "For centuries, scientists have tried to map out these areas in an attempt to better understand how the brain works. Now, researchers have published a new brain “atlas” that includes nearly 100 previously unmapped regions.",
+  imageUrl: "http://motherboard-images.vice.com/content-images/contentimage/35821/1469026202421104.png",
+  author: "Victoria Turk",
+  location: "Washington University",
+  date: "July 20, 2016",
   compassionScale: " "
   },
   {
-  articleUrl: " ",
-  title: " ",
-  description: " ",
+  articleUrl: "http://interactive.aljazeera.com/aje/shorts/india-menstruation-man/index.html",
+  title: "India's Menstruation Man",
+  description: "Arunachalam Muruganantham was obsessed with making the perfect sanitary pad for his wife. After years of work, his invention has changed the lives of millions of women in India.",
   imageUrl: " ",
   author: " ",
   location: " ",
