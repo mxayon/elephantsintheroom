@@ -1,6 +1,9 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+var Article = require('./tagWord.js');
+var ArticleTagWord = require('./articleTagWord.js');
+
 var ArticleSchema = new Schema ({
   articleUrl: String,
   title: String,

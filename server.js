@@ -47,6 +47,13 @@ app.delete('/api/tagWords/:tagWordId', controllers.tagWords.destroy);
 
 app.put('/api/tagWords/:tagWordId', controllers.tagWords.update);
 
+app.get('/api/articleTagWords', controllers.articleTagWords.index);
+
+app.get('/api/articleTagWords/:articleTagWordsId', controllers.articleTagWords.show);
+
+app.post('/api/articleTagWords', controllers.articleTagWords.create);
+
+
 //////SERVER
 
 // listen on port 3000

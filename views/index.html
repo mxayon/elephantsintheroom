@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>CROW</title>
+    <title>Elephants in the Room</title>
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
@@ -21,28 +21,30 @@
   <body>
     <div class="jumbotron">
       <div class="container">
-          <h1>Welcome to Compass!</h1>
+          <h1>Elephants in the Room</h1>
           <p>Your article scaler</p>
         </div>
-      </div>
-    <div class="container">
-      <div class="row">
-
-
-
-
-          <!-- handlebars template -->
-          <script id="article-template" type="text/x-handlebars-template">
-            {{#each article}}
-            <hr>
-            <p>
-              <b>{{articleUrl}}</b>
-                {{title}}
-              <button type="button" name="button" class="deleteBtn btn btn-danger pull-right" data-id={{_id}}>Delete</button>
-            </p>
-            {{/each}}
-          </script>
-      </div>
     </div>
+    <div class="container">
+      <div id="articleTarget">
+        HIIIIII
+
+      <script id="article-template" type="text/x-handlebars-template">
+
+        <p>
+          <br>
+          TESTTTT
+          {{articleUrl}}
+          <br>
+          {{title}}
+          <br>
+          {{description}}
+          <br>
+        </p>
+        <img src="{{imageUrl}}">
+
+    </script>
+  </div>
+  </div>
   </body>
 </html>

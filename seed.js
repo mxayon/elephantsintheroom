@@ -60,16 +60,16 @@ var tagWordObj7 = {
 };
 
 
-db.TagWord.remove({},function RemoveTags(err, succ) {
+db.TagWord.remove({},function(err, success) {
   console.log("Removed tags...");
 });
 
-db.Article.remove({}, function RemoveArticles(err, succ) {
+db.Article.remove({}, function(err, success) {
   if (err) {console.log(err);}
   console.log("Cleaned out Articles!!!");
 });
 
-db.ArticleTagWord.remove({}, function RemoveArticleTagWord(err, succ) {
+db.ArticleTagWord.remove({}, function(err, succ) {
   if (err) {console.log(err);}
   console.log("Cleaned out ArticleTagWords!!!");
 });
@@ -149,20 +149,22 @@ db.TagWord.create(tagWordObj0, function(err, tagWordSuccess) {
 
   /*  depopulate and return instructors */
   // db.TagWord.findOne({
-  //     name: 'Communication'
-  //   },
-  //   function(err, succ) {
-  //     db.ArticleTagWord.find({
-  //         tagWordId: succ._id
-  //       })
-  //       .populate('articleId')
-  //       .exec(function(err, articles) {
-  //         if (err) {console.log(err);}
-  //         instructors.forEach( function(el) {
-  //           console.log(el.articleId.title);
-  //         });
-  //       });
+  //   name: "Communication"
+  // },
+  // function(err, succ) {
+  //   db.ArticleTagWord.find({
+  //     tagWordId: succ._id,
+  //   })
+  //   .populate('articleId')
+  //   .exec(function(err, articles) {
+  //     if (err) {console.log(err);}
+  //     article.forEach( function(el) {
+  //       console.log(el.articleId.title);
+  //     });
   //   });
+  // });
+
+
 
 
 
