@@ -9,17 +9,17 @@ var articlesList = [
   author: "Victoria Turk",
   location: "Washington University",
   date: "July 20, 2016",
-  compassionScale: " "
+  compassionScale: "50"
   },
   {
   articleUrl: "http://interactive.aljazeera.com/aje/shorts/india-menstruation-man/index.html",
   title: "India's Menstruation Man",
   description: "Arunachalam Muruganantham was obsessed with making the perfect sanitary pad for his wife. After years of work, his invention has changed the lives of millions of women in India.",
-  imageUrl: " ",
-  author: " ",
-  location: " ",
-  date: " ",
-  compassionScale: " "
+  imageUrl: "/images/ajshortsindiamm.jpg",
+  author: "Dirk Gilson",
+  location: "South India",
+  date: "1998",
+  compassionScale: "50"
   },
   {
   articleUrl: "https://orgs.law.harvard.edu/docstudio/films/",
