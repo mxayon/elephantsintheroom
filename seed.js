@@ -35,13 +35,13 @@ var articlesList = [
 
 
 var tagWordObj0 = {
-  name: "The Big Elephants and Current Issues"
+  name: "Major Issues and Current Events"
 };
 var tagWordObj1 = {
-  name: "Human Rights and Civil Liberties"
+  name: "Connection"
 };
 var tagWordObj2 = {
-  name: "Global Crisis"
+  name: "Culture"
 };
 var tagWordObj3 = {
   name: "Communication"
@@ -50,7 +50,7 @@ var tagWordObj4 = {
   name: "Culture"
 };
 var tagWordObj5 = {
-  name: "Connection"
+  name: " "
 };
 var tagWordObj6 = {
   name: "Tech And Web Development"

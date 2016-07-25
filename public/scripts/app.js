@@ -20,7 +20,10 @@ $(document).ready(function() {
 			}
 		}
 		clickEvent = false;
+
 	  });
+
+///////////form
 
     $("#add_row").on("click", function() {
           // Dynamic Rows Code
@@ -85,23 +88,23 @@ $(document).ready(function() {
 /////end document ready//////
 });
 
-var $currentCarousel = articlesList;
+// var $currentCarousel = articlesList;
 
 
-
-function renderArticles(articles) {
-  var articleHtml = $('#articles-template').html();
-  var articleTemplate = Handlebars.compile(articleHtml);
-  var html = articleTemplate({ articles: articles });
-  $currentCarousel.find('articlesList').appened(html);
-  $('#container-carousel').prepend(html);
-}
-
-function onSuccess(json) {
-  console.log('FOUND ALL PIECES');
-  renderArticles(json);
-
-}
+//
+// function renderArticles(articles) {
+//   var articleHtml = $('#articles-template').html();
+//   var articleTemplate = Handlebars.compile(articleHtml);
+//   var html = articleTemplate({ articles: articles });
+//   $currentCarousel.find('articlesList').appened(html);
+//   $('#container-carousel').prepend(html);
+// }
+//
+// function onSuccess(json) {
+//   console.log('FOUND ALL PIECES');
+//   renderArticles(json);
+//
+// }
 
 
 $(window).scroll(function() {
