@@ -22,6 +22,26 @@ var articlesList = [
   compassionScale: "50"
   },
   {
+  articleUrl: "http://today.law.harvard.edu/feature/seizing-opportunity-alan-jenkins-agenda-social-change/",
+  title: "Seizing the Opportunity",
+  description: "Alan Jenkins’ agenda for social change starts with communication.",
+  imageUrl: "https://today.law.harvard.edu/wp-content/uploads/2016/04/01_19_16_GlenJenkinsClass_098_MStewartop.op_-768x512.jpg",
+  author: "STEPHANIE SCHOROW",
+  location: "Cambridge, MA",
+  date: "April 28, 2016",
+  compassionScale: "50"
+  },
+  {
+  articleUrl: "http://www.aljazeera.com/news/americas/2014/09/yahoo-faced-massive-fine-threat-over-data-2014911232221919500.html",
+  title: "Yahoo faced massive fine threat over data",
+  description: "Internet giant says it was threatened with fine of $250,000 a day in 2008 if it did not surrender online information.",
+  imageUrl: "http://www.aljazeera.com/mritems/imagecache/mbdxxlarge/mritems/Images/2014/9/12//20149122324039734_20.jpg",
+  author: "reuters",
+  location: "USA",
+  date: "11 SEPTEMBER 2014",
+  compassionScale: "50"
+  },
+  {
   articleUrl: "https://orgs.law.harvard.edu/docstudio/films/",
   title: "The Harvard Law Documentary Studio",
   description: "The Harvard Law Documentary Studio aims to produce original documentaries that explore social and policy issues.",

@@ -1,6 +1,7 @@
 $(document).ready(function() {
   console.log('app.js loaded!');
   $.get('/api/articles', onSuccess);
+  $.get('/api/articles', onSuccessTitle);
 ////carousel
   var clickEvent = false;
 	$('#myCarousel').carousel({
@@ -88,45 +89,62 @@ $(document).ready(function() {
 /////end document ready//////
 });
 
-// var $currentCarousel = articlesList;
+// var $currentCarousel = $(".container-carousel");
 
 
+
+function renderArticles(article) {
+  var articleHtml = $('#articles-template').html();
+  var articleTemplate = Handlebars.compile(articleHtml);
+  var html = articleTemplate(article);
+  // $currentCarousel.find('articlesList').append(html);
+  $('.carousel-inner').prepend(html);
+}
+
+function onSuccess(articles) {
+  console.log('FOUND ALL PIECES', articles);
+  articles.forEach(function (article){
+    renderArticles(article);
+  });
+}
+
+function renderTitle(title) {
+  var titleHtml = $('#title-template').html();
+  var titleTemplate = Handlebars.compile(titleHtml);
+  var html = titleTemplate(title);
+  console.log(html);
+  $('.list-group').prepend(html);
+}
+
+function onSuccessTitle(titles) {
+  console.log('FOUND ALL PIECES', titles);
+  titles.forEach(function (title){
+    renderTitle(title);
+  });
+}
+
+////////scroll spy
 //
-// function renderArticles(articles) {
-//   var articleHtml = $('#articles-template').html();
-//   var articleTemplate = Handlebars.compile(articleHtml);
-//   var html = articleTemplate({ articles: articles });
-//   $currentCarousel.find('articlesList').appened(html);
-//   $('#container-carousel').prepend(html);
-// }
+// $(window).scroll(function() {
+//     if ($(".navbar").offset().top > 50) {
+//         $(".navbar-fixed-top").addClass("top-nav-collapse");
+//     } else {
+//         $(".navbar-fixed-top").removeClass("top-nav-collapse");
+//     }
+// });
 //
-// function onSuccess(json) {
-//   console.log('FOUND ALL PIECES');
-//   renderArticles(json);
-//
-// }
+// //jQuery for page scrolling feature - requires jQuery Easing plugin
+// $(function() {
+//     $('a.page-scroll').bind('click', function(event) {
+//         var $anchor = $(this);
+//         $('html, body').stop().animate({
+//             scrollTop: $($anchor.attr('href')).offset().top
+//         }, 1500, 'easeInOutExpo');
+//         event.preventDefault();
+//     });
+// });
 
-
-$(window).scroll(function() {
-    if ($(".navbar").offset().top > 50) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
-    } else {
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
-    }
-});
-
-//jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function() {
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
-});
-
-
+////////end scroll spy
 
 $(window).load(function() {
     var boxheight = $('#myCarousel .carousel-inner').innerHeight();

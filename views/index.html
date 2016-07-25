@@ -21,12 +21,34 @@
 </head>
 <body>
 
-
-
-
-
-
-
+  <div id="nav">
+  <div class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="80">
+    <div class="container">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <a href="#" class="navbar-brand">Brand</a>
+      <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="glyphicon glyphicon-bar"></span>
+        <span class="glyphicon glyphicon-bar"></span>
+        <span class="glyphicon glyphicon-bar"></span>
+      </a>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Major Issues and Current Events</a></li>
+          <li><a href="#">Connection</a></li>
+          <li><a href="#">Cultire</a></li>
+          <li><a href="#">Communication</a></li>
+        </ul>
+        <ul class="nav pull-right navbar-nav">
+          <li>
+           <a href="#">Link</a>
+          </li>
+          <li>
+            <a href="#"><span class="badge">2</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div><!-- /.navbar -->
 
 
     <!-- ///////////// JUMBO TRON STart//////// -->
@@ -43,11 +65,12 @@
     <!-- //////// carousel start ///////  -->
 
     <div class="container-carousel">
-     <script id="articles-template" type="text/x-handlebars-template">
+
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
+          <script id="articles-template" type="text/x-handlebars-template">
 
               <div class="item active">
                   <img src="http://placehold.it/760x400/cccccc/ffffff">
@@ -96,21 +119,24 @@
 
           </div>
           <!-- End Carousel Inner -->
+          </script>
 
 
           <ul class="list-group col-sm-4">
-              {{#each article}}
+            <script id="title-template" type="text/x-handlebars-template">
+
               <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active">
                   <p>{{title}}</p></li>
-              <li data-target="#myCarousel" data-slide-to="1" class="list-group-item">
-                  <p>{{title}}</p></li>
+              <!-- <li data-target="#myCarousel" data-slide-to="1" class="list-group-item">
+                  <p></p></li>
               <li data-target="#myCarousel" data-slide-to="2" class="list-group-item">
-                  <p>{{title}}</p></li>
+                  <p></p></li>
               <li data-target="#myCarousel" data-slide-to="3" class="list-group-item">
-                  <p>{{title}}</p></li>
+                  <p></p></li>
               <li data-target="#myCarousel" data-slide-to="4" class="list-group-item">
-                  <p>{{title}}</p></li>
-              {{/each}}
+                  <p></p></li> -->
+            </script>
+
           </ul>
 
           <!-- Controls -->
@@ -126,7 +152,7 @@
       </div>
       <!-- End Carousel -->
 
-    </script>
+
     </div>
     <!-- //////////end carousel  -->
 
@@ -187,25 +213,6 @@
 
     <!-- /////// end form with jaquery  -->
 
-
-
-
-    <div class="container">
-        <div id="articleTarget">
-
-            <script id="article-template" type="text/x-handlebars-template">
-
-                <p>
-                    <br> TESTTTT {{article.articleUrl}}
-                    <br> {{title}}
-                    <br> {{description}}
-                    <br>
-                </p>
-                <img src="{{imageUrl}}">
-
-            </script>
-        </div>
-    </div>
 </body>
 
 </html>
