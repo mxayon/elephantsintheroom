@@ -62,8 +62,8 @@ of those sections to manage the look and feel of the site. */
     left: 0;
     right: 0;
     bottom: 0;
-    text-align: left;
-    padding: 10px;
+    text-align: none;
+    padding: 1px;
     background: rgba(0, 0, 0, 0.6);
     text-shadow: none;
 }
@@ -75,6 +75,11 @@ of those sections to manage the look and feel of the site. */
 #myCarousel .list-group-item {
     border-radius: 0px;
     cursor: pointer;
+    overflow:hidden;
+    width:auto;
+    position:relative;
+    padding: 15px;
+    text-align: center;
 }
 #myCarousel .list-group .active {
     background-color: #eee;

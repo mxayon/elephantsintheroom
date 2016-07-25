@@ -85,6 +85,24 @@ $(document).ready(function() {
 /////end document ready//////
 });
 
+var $currentCarousel = articlesList;
+
+
+
+function renderArticles(articles) {
+  var articleHtml = $('#articles-template').html();
+  var articleTemplate = Handlebars.compile(articleHtml);
+  var html = articleTemplate({ articles: articles });
+  $currentCarousel.find('articlesList').appened(html);
+  $('#container-carousel').prepend(html);
+}
+
+function onSuccess(json) {
+  console.log('FOUND ALL PIECES');
+  renderArticles(json);
+
+}
+
 
 $(window).scroll(function() {
     if ($(".navbar").offset().top > 50) {
@@ -105,20 +123,7 @@ $(function() {
     });
 });
 
-function renderArticle(article) {
-  var articleHtml = $('#article-template').html();
-  var articleTemplate = Handlebars.compile(articleHtml);
-  var html = articleTemplate(article);
-  $('#article-template').prepend(html);
-}
 
-function onSuccess(json) {
-  console.log('FOUND ALL PIECES');
-  json.forEach(function(article) {
-    renderArticle(article);
-    console.log(article);
-  });
-}
 
 $(window).load(function() {
     var boxheight = $('#myCarousel .carousel-inner').innerHeight();
