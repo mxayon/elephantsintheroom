@@ -45,7 +45,7 @@ var articlesList = [
   articleUrl: "https://orgs.law.harvard.edu/docstudio/films/",
   title: "The Harvard Law Documentary Studio",
   description: "The Harvard Law Documentary Studio aims to produce original documentaries that explore social and policy issues.",
-  imageUrl: "https://orgs.law.harvard.edu/docstudio/",
+  imageUrl: "https://orgs.law.harvard.edu/docstudio/files/2015/09/cropped-Doc-Studio-logo.jpg",
   author: " ",
   location: " ",
   date: " ",
@@ -65,18 +65,6 @@ var tagWordObj2 = {
 };
 var tagWordObj3 = {
   name: "Communication"
-};
-var tagWordObj4 = {
-  name: "Culture"
-};
-var tagWordObj5 = {
-  name: " "
-};
-var tagWordObj6 = {
-  name: "Tech And Web Development"
-};
-var tagWordObj7 = {
-  name: "Documentaries"
 };
 
 
@@ -105,11 +93,11 @@ db.TagWord.create(tagWordObj0, function(err, tagWordSuccess) {
         var article = new db.Article({
           articleUrl: articleData.articleUrl,
           title: articleData.title,
+          description: articleData.description,
           imageUrl: articleData.imageUrl,
           author: articleData.author,
           location: articleData.location,
           date: articleData.date,
-          source: articleData.source,
           compassionScale: articleData.compassionScale
         });
           article.save(function(err, savedArticle){
@@ -136,6 +124,7 @@ db.TagWord.create(tagWordObj0, function(err, tagWordSuccess) {
         if (err) {console.log(err);}
         console.log("ALL JOINS: " ,suc);
       });
+
 /////// tag word obj3
       db.TagWord.create(tagWordObj3, function handleNewTagWord(err, tagWordCommunication){
         if (err) {console.log(err);}
@@ -162,8 +151,9 @@ db.TagWord.create(tagWordObj0, function(err, tagWordSuccess) {
             });
           });
         });
-
       });
+
+
 
   });
 

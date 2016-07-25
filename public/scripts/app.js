@@ -84,6 +84,18 @@ $(document).ready(function() {
           });
   });
 
+  $('#article-form form').on('submit', function(e) {
+      e.preventDefault();
+      var formData = $(this).serialize();
+      console.log('formData', formData);
+      $.post('/api/articles', formData, function(articles) {
+      console.log('article after POST', articles);
+      renderArticles(article);  //render the server's response
+      });
+      $(this).trigger("reset");
+      $('form input').val('');
+    });
+
 
 
 /////end document ready//////
@@ -121,6 +133,13 @@ function onSuccessTitle(titles) {
   titles.forEach(function (title){
     renderTitle(title);
   });
+}
+
+
+
+function handleNewArticle(articles) {
+  console.log(articles);
+  renderArticles(article);
 }
 
 ////////scroll spy

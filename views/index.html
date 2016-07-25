@@ -25,7 +25,7 @@
   <div class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="80">
     <div class="container">
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <a href="#" class="navbar-brand">Brand</a>
+      <a href="#" class="navbar-brand">Elephants in the Room</a>
       <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="glyphicon glyphicon-bar"></span>
         <span class="glyphicon glyphicon-bar"></span>
@@ -40,10 +40,7 @@
         </ul>
         <ul class="nav pull-right navbar-nav">
           <li>
-           <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#"><span class="badge">2</span></a>
+           <a href="#">Add an Article</a>
           </li>
         </ul>
       </div>
@@ -54,18 +51,19 @@
     <!-- ///////////// JUMBO TRON STart//////// -->
     <div class="jumbotron text-center">
         <div class="container">
-            <h1>Elephant in the Room </h1>
+            <h1>Elephants in the Room </h1>
             <h5>: an <strong>obvious major problem</strong> or issue that people avoid discussing or acknowledging</h5>
         </div>
+            <p> <a class="btn btn-default page-scroll" href="#about">Big Elephants</a></p>
     </div>
-    <p> <a class="btn btn-default page-scroll" href="#about">Big Elephants</a></p>
+
     <!-- /////jumbo tron end ////// -->
 
 
     <!-- //////// carousel start ///////  -->
 
     <div class="container-carousel">
-
+      <div class="row">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
           <!-- Wrapper for slides -->
@@ -73,22 +71,38 @@
           <script id="articles-template" type="text/x-handlebars-template">
 
               <div class="item active">
-                  <img src="http://placehold.it/760x400/cccccc/ffffff">
+                  <img src="{{imageUrl}}">
                   <div class="carousel-caption">
-                      <h4><a href="#">TEST</a></h4>
-                      <p>{{articleUrl}}</p>
+                      <h4><a href="#">{{title}}</a></h4>
+                      <p>{{description}}<a class="label label-primary" href="{{articleUrl}}" target="_blank">{{title}}</a></p>
                   </div>
               </div>
-              <!-- End Item -->
 
-              <div class="item">
+                <div class="item">
                   <img src="{{imageUrl}}">
                   <div class="carousel-caption">
                       <h4><a href="#">{{title}}</a></h4>
                       <p> {{description}}</p>
                   </div>
+                </div>
+
+              <!-- <div class="item">
+                  <img src="{{imageUrl}}">
+                  <div class="carousel-caption">
+                      <h4><a href="#">{{title}}</a></h4>
+                      <p>{{description}}<a class="label label-primary" href="{{articleUrl}}" target="_blank">{{title}}</a></p>
+                  </div>
+              </div> -->
+
+
+              <!-- <div class="item">
+                  <img src="{{imageUrl}}">
+                  <div class="carousel-caption">
+                      <h4><a href="#">{{title}}</a></h4>
+                      <p>{{description}}<a class="label label-primary" href="{{articleUrl}}" target="_blank">{{title}}</a></p>
+                  </div>
               </div>
-              <!-- End Item -->
+
 
               <div class="item">
                   <img src="{{imageUrl}}">
@@ -96,28 +110,11 @@
                       <h4><a href="#">{{title}}</a></h4>
                       <p>{{description}}<a class="label label-primary" href="{{articleUrl}}" target="_blank">{{title}}</a></p>
                   </div>
-              </div>
-              <!-- End Item -->
+              </div> -->
 
-              <div class="item">
-                  <img src="{{imageUrl}}">
-                  <div class="carousel-caption">
-                      <h4><a href="#">{{title}}</a></h4>
-                      <p>{{description}}<a class="label label-primary" href="{{articleUrl}}" target="_blank">{{title}}</a></p>
-                  </div>
-              </div>
-              <!-- End Item -->
-
-              <div class="item">
-                  <img src="{{imageUrl}}">
-                  <div class="carousel-caption">
-                      <h4><a href="#">{{title}}</a></h4>
-                      <p>{{description}}<a class="label label-primary" href="{{articleUrl}}" target="_blank">{{title}}</a></p>
-                  </div>
-              </div>
-              <!-- End Item -->
 
           </div>
+
           <!-- End Carousel Inner -->
           </script>
 
@@ -128,8 +125,8 @@
               <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active">
                   <p>{{title}}</p></li>
               <!-- <li data-target="#myCarousel" data-slide-to="1" class="list-group-item">
-                  <p></p></li>
-              <li data-target="#myCarousel" data-slide-to="2" class="list-group-item">
+                  <p></p></li> -->
+              <!-- <li data-target="#myCarousel" data-slide-to="2" class="list-group-item">
                   <p></p></li>
               <li data-target="#myCarousel" data-slide-to="3" class="list-group-item">
                   <p></p></li>
@@ -154,11 +151,12 @@
 
 
     </div>
+    </div>
     <!-- //////////end carousel  -->
 
 
     <!-- /////form with jaquery  -->
-
+<!--
     <div class="container">
         <div class="row clearfix">
             <div class="col-md-12 table-responsive">
@@ -166,52 +164,137 @@
                     <thead>
                         <tr>
                             <th class="text-center">
-                                Name
+                                Article
                             </th>
                             <th class="text-center">
-                                Email
+                                Title
                             </th>
                             <th class="text-center">
-                                Notes
+                                Description
                             </th>
                             <th class="text-center">
-                                Option
+                                Image
                             </th>
                             <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;">
                             </th>
                         </tr>
                     </thead>
                     <tbody>
+                      <section id="article-form" class="container">
                         <tr id='addr0' data-id="0" class="hidden">
-                            <td data-name="name">
-                                <input type="text" name='name0' placeholder='Name' class="form-control" />
+                          <form class="form">
+                            <fieldset>
+                            <td data-name="title">
+                              <div class= "form-group">
+                                <input type="text" name='title' placeholder='Article Title' class="form-control" />
+                              </div>
                             </td>
-                            <td data-name="mail">
-                                <input type="text" name='mail0' placeholder='Email' class="form-control" />
+                            <td data-name="articleUrl">
+                              <div class= "form-group">
+                                <input type="text" name='articleUrl' placeholder='Article Link' class="form-control" />
+                              </div>
                             </td>
-                            <td data-name="desc">
-                                <textarea name="desc0" placeholder="Description" class="form-control"></textarea>
+                            <td data-name="description">
+                              <div class= "form-group">
+                                <textarea name="description" placeholder="Description" class="form-control"></textarea>
+                              <div>
                             </td>
-                            <td data-name="sel">
-                                <select name="sel0">
-                                    <option value "">Select Option</option>
-                                    <option value "1">Option 1</option>
-                                    <option value "2">Option 2</option>
-                                    <option value "3">Option 3</option>
+                            <td data-name="tagWord">
+                              <div class= "form-group">
+                                <select name="tagWord">
+                                    <option value "">Select Category</option>
+                                    <option value "major">Major Issues</option>
+                                    <option value "communication">Communication</option>
+                                    <option value "culture">Culture</option>
+                                    <option value "connection">Connection</option>
                                 </select>
+                              </div>
                             </td>
-                            <td data-name="del">
-                                <button nam "del0" class='btn btn-danger glyphicon glyphicon-remove row-remove'></button>
+                            <td data-name="submit">
+                              <div class= "form-group">
+                                <button id="article-save" class="btn btn-primary pull-right">Submit</button>
+                              </div>
                             </td>
+
+                          </fieldset>
+                          </form>
                         </tr>
+                      </section>
                     </tbody>
                 </table>
             </div>
         </div>
         <a id="add_row" class="btn btn-default pull-right">Add Row</a>
-    </div>
+    </div> -->
 
     <!-- /////// end form with jaquery  -->
+
+    <section id='article-form' class="container">
+     <div class="row">
+     <div class="col-md-10 col-md-offset-1">
+
+       <form class="form-horizontal">
+         <fieldset>
+
+           <!-- Form Name -->
+           <legend>Add New Article</legend>
+
+           <!-- Text input-->
+           <div class="form-group">
+             <label class="col-md-4 control-label" for="title">Article Title</label>
+             <div class="col-md-4">
+             <input id="title" name="title" type="text" placeholder="" class="form-control input-md" required="">
+
+             </div>
+           </div>
+
+           <!-- Text input-->
+           <div class="form-group">
+             <label class="col-md-4 control-label" for="articleUrl">Article Url</label>
+             <div class="col-md-4">
+             <input id="articleUrl" name="articleUrl" type="text" placeholder="Ariticle URL" class="form-control input-md">
+
+             </div>
+           </div>
+
+           <!-- Text input-->
+           <div class="form-group">
+             <label class="col-md-4 control-label" for="description">Brief Description</label>
+             <div class="col-md-4">
+             <input id="description" name="description" type="text" placeholder="description" class="form-control input-md">
+
+             </div>
+           </div>
+<!-- ///////////// -->
+           <div class="form-group">
+             <label class="col-md-4 control-label" for="imageUrl">Article Image</label>
+             <div class="col-md-4">
+             <input id="imageUrl" name="imageUrl" type="url" placeholder="Article Image Url" class="form-control input-md">
+
+             </div>
+           </div>
+<!-- ////////////// -->
+           <!-- Textarea -->
+           <div class="form-group">
+             <label class="col-md-4 control-label" for="tagWords">Categories</label>
+             <div class="col-md-4">
+               <textarea class="form-control" id="tagWords" name="tagWords">Current Issues, Communication, Culture, Connection.</textarea>
+             </div>
+           </div>
+
+
+           <!-- Button -->
+           <div class="form-group">
+             <label class="col-md-4 control-label" for="singlebutton">Save Article</label>
+             <div class="col-md-4">
+               <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+             </div>
+           </div>
+         </fieldset>
+       </form>
+     </div>
+     </div>
+   </section>
 
 </body>
 
