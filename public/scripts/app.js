@@ -51,7 +51,7 @@ $(document).ready(function() {
 function handleDeleteArticleClick(e) {
   e.preventDefault();
  console.log("DELETE CALLED");
- var articleId = $(this).parents('.articlesShow').data('article-id');
+ var articleId = $(this).parents('.thumbnail').data('article-id');
  console.log('someone wants to delete article');
  $.ajax ({
    method: 'DELETE',
@@ -63,8 +63,8 @@ function handleDeleteArticleClick(e) {
 // callback after DELETE /api/albums/:id
 function handleDeleteArticleSuccess(article) {
  var deletedArticleId = article._id;
- console.log('removing the following article from the page:', deletedArticle);
- $('div[data-artist-id=' + deletedArticleId + ']').remove();
+ console.log('removing the following article from the page');
+ $('div[data-article-id=' + deletedArticleId + ']').remove();
 }
 
 function onSuccessMajorIssues(articles) {
