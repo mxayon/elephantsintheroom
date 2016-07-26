@@ -64,22 +64,50 @@ function renderMajor(article) {
 function onSuccessCommunication(articles) {
   console.log('FOUND ALL CommunicationArticles', articles);
   articles.forEach(function (article){
-    renderArticles(article);
+    renderCommunication(article);
 });
 }
+
+function renderCommunication(article) {
+  var articleHtml = $('#articles-template').html();
+  var articleTemplate = Handlebars.compile(articleHtml);
+  var html = articleTemplate(article);
+  $('.articlesShow').empty();
+  // $currentCarousel.find('articlesList').append(html);
+  $('.articlesShow').prepend(html);
+}
+
 
 function onSuccessCulture(articles) {
   console.log('FOUND ALL CultureArticles', articles);
   articles.forEach(function (article){
-    renderArticles(article);
+    renderCulture(article);
 });
+}
+
+function renderCulture(article) {
+  var articleHtml = $('#articles-template').html();
+  var articleTemplate = Handlebars.compile(articleHtml);
+  var html = articleTemplate(article);
+  $('.articlesShow').empty();
+  // $currentCarousel.find('articlesList').append(html);
+  $('.articlesShow').prepend(html);
 }
 
 function onSuccessConnection(articles) {
   console.log('FOUND ALL ConnectionArticles', articles);
   articles.forEach(function (article){
-    renderArticles(article);
+    renderConnection(article);
 });
+}
+
+function renderConnection(article) {
+  var articleHtml = $('#articles-template').html();
+  var articleTemplate = Handlebars.compile(articleHtml);
+  var html = articleTemplate(article);
+  $('.articlesShow').empty();
+  // $currentCarousel.find('articlesList').append(html);
+  $('.articlesShow').prepend(html);
 }
 
 function renderArticles(article) {
