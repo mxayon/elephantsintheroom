@@ -41,7 +41,7 @@ var articlesList = [
   articleUrl: "https://interactive.aljazeera.com/aje/shorts/india-menstruation-man/index.html",
   title: "India's Menstruation Man",
   description: "Arunachalam Muruganantham was obsessed with making the perfect sanitary pad for his wife. After years of work, his invention has changed the lives of millions of women in India.",
-  imageUrl: "/images/ajshortsindiamm.jpg",
+  imageUrl: "http://www.tvweek.com/wp-content/uploads/2014/08/al-jazeera-america-logo.jpg",
   author: "Dirk Gilson",
   location: "South India",
   date: "1998"
