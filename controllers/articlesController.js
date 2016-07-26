@@ -48,7 +48,7 @@ function update(req, res) {
       foundArticle.imageUrl=req.body.imageUrl,
       foundArticle.author=req.body.author,
       foundArticle.location=req.body.location,
-      foundArticle.date=req.body.date
+      foundArticle.date=req.body.date,
       foundArticle.save(function(err, updatedArticle){
         if (err) {
           return console.log("create error: " + err);

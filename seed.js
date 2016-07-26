@@ -44,8 +44,7 @@ var articlesList = [
   imageUrl: "/images/ajshortsindiamm.jpg",
   author: "Dirk Gilson",
   location: "South India",
-  date: "1998",
-  compassionScale: "50"
+  date: "1998"
   },
   {
   articleUrl: "https://www.ted.com/talks/jamila_lyiscott_3_ways_to_speak_english",
@@ -54,8 +53,7 @@ var articlesList = [
   imageUrl: "http://cdn2.hubspot.net/hubfs/451100/ted.jpg",
   author: "Jamila Lyiscott",
   location: " ",
-  date: "February 2010",
-  compassionScale: "50"
+  date: "February 2010"
   },
   {
   articleUrl: "https://today.law.harvard.edu/feature/seizing-opportunity-alan-jenkins-agenda-social-change/",
@@ -64,8 +62,7 @@ var articlesList = [
   imageUrl: "https://today.law.harvard.edu/wp-content/uploads/2016/04/01_19_16_GlenJenkinsClass_098_MStewartop.op_-768x512.jpg",
   author: "STEPHANIE SCHOROW",
   location: "Cambridge, MA",
-  date: "April 28, 2016",
-  compassionScale: "50"
+  date: "April 28, 2016"
   },
   {
   articleUrl: "https://www.aljazeera.com/news/americas/2014/09/yahoo-faced-massive-fine-threat-over-data-2014911232221919500.html",
@@ -74,8 +71,7 @@ var articlesList = [
   imageUrl: "http://www.aljazeera.com/mritems/imagecache/mbdxxlarge/mritems/Images/2014/9/12//20149122324039734_20.jpg",
   author: "reuters",
   location: "USA",
-  date: "11 SEPTEMBER 2014",
-  compassionScale: "20"
+  date: "11 SEPTEMBER 2014"
   },
   {
   articleUrl: "http://www.theatlantic.com/politics/archive/2016/07/disputed-influence-of-black-lives-matter/492704/",
@@ -84,8 +80,7 @@ var articlesList = [
   imageUrl: "https://cdn.theatlantic.com/assets/media/img/mt/2016/07/AP_081104023882/lead_960.jpg?1469219260",
   author: "THEODORE R. JOHNSON",
   location: "Philadelphia, PA",
-  date: "JUL 25, 2016",
-  compassionScale: ""
+  date: "JUL 25, 2016"
   },
   {
   articleUrl: "https://orgs.law.harvard.edu/docstudio/films/",
@@ -94,8 +89,7 @@ var articlesList = [
   imageUrl: "https://orgs.law.harvard.edu/docstudio/files/2015/09/cropped-Doc-Studio-logo.jpg",
   author: " ",
   location: " ",
-  date: " ",
-  compassionScale: " "
+  date: " "
   },
   {
   articleUrl: "http://nymag.com/scienceofus/2016/07/the-charles-kinsey-shooting-shows-police-still-have-a-mental-illness-problem.html",
@@ -104,8 +98,7 @@ var articlesList = [
   imageUrl: "http://pixel.nymag.com/imgs/daily/science/2016/07/21/21-unarmed-man.w710.h473.2x.jpg",
   author: "Jesse Singal",
   location: " ",
-  date: "July 21, 2016",
-  compassionScale: " "
+  date: "July 21, 2016"
   },
   {
   articleUrl: "http://nymag.com/scienceofus/2016/07/why-pokmon-go-might-actually-be-helping-kids-with-autism.html",
@@ -114,8 +107,7 @@ var articlesList = [
   imageUrl: "http://pixel.nymag.com/imgs/daily/intelligencer/2016/07/19/19-pokemon-go.w710.h473.2x.jpg",
   author: " ",
   location: " ",
-  date: " ",
-  compassionScale: " "
+  date: " "
   },
   {
   articleUrl: "https://i-d.vice.com/en_gb/article/ai-weiwei-and-patti-smith-part-of-artangel-project-at-prison-oscar-wilde-was-sent-to-for-being-gay",
@@ -124,8 +116,7 @@ var articlesList = [
   imageUrl: "https://i-d-images.vice.com/images/2016/07/21/untitled-article-1469096930-body-image-1469097372.jpg?output-quality=75",
   author: "Charlotte Gush",
   location: " ",
-  date: "21 July, 2016",
-  compassionScale: " "
+  date: "21 July, 2016"
   },
   {
   articleUrl: "http://motherboard.vice.com/read/machine-learning-algorithm-spots-depression-based-on-speech-patterns",
@@ -134,8 +125,7 @@ var articlesList = [
   imageUrl: "https://assets.pando.com/uploads/2014/02/motherboard.jpg",
   author: "Charlotte Gush",
   location: " ",
-  date: "July 9, 2016",
-  compassionScale: " "
+  date: "July 9, 2016"
   },
   {
   articleUrl: "http://nymag.com/scienceofus/2016/07/why-conservatives-band-together-fast.html",
@@ -144,8 +134,7 @@ var articlesList = [
   imageUrl: "http://pixel.nymag.com/imgs/daily/science/2016/07/21/21-conservative-psychology.w710.h473.2x.jpg",
   author: "Drake Baer",
   location: "Washington, DC ",
-  date: "July 22, 2016",
-  compassionScale: " "
+  date: "July 22, 2016"
   }
 ];
 
