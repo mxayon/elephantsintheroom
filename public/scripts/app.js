@@ -42,10 +42,31 @@ $(document).ready(function() {
       $('form input').val('');
     });
 
+  $('.articlesShow').on('click', '.deleteBtn', handleDeleteArticleClick);
 
 
 /////end document ready//////
 });
+
+function handleDeleteArticleClick(e) {
+ console.log("DELETE CALLED");
+ var articleId = $(this).parents('.articlesShow').data('article-id');
+ console.log('someone wants to delete article id=' + articleId );
+ $.ajax({
+   url: '/api/articles/' + articleId,
+   method: 'DELETE',
+   success: handleDeleteArticleSuccess
+ });
+}
+
+// callback after DELETE /api/albums/:id
+function handleDeleteArticleSuccess(article) {
+ var deletedArticle = article;
+ console.log('removing the following article from the page:', deletedArticle);
+ var divToRemove = 'div[data-article-id=' + deletedArticle._id + ']';
+ console.log(divToRemove);
+ $(divToRemove).remove();
+}
 
 
 function onSuccessMajorIssues(articles) {
