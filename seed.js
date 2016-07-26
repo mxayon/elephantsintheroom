@@ -12,6 +12,36 @@ var articlesList = [
   compassionScale: "50"
   },
   {
+  articleUrl: "http://www.aljazeera.com/news/2015/12/ai-wei-wei-photos-lesbos-capture-refugee-life-151229053732453.html",
+  title: "Ai Weiwei's photos from Lesbos capture refugee life",
+  description: "Chinese artist shares images and videos, drawing attention to plight of thousands of refugees arriving in Greece.",
+  imageUrl: "http://www.aljazeera.com/mritems/imagecache/mbdxxlarge/mritems/Images/2015/12/29/0ed919c3cdc44a3db74d57660b4d3775_18.jpg",
+  author: "Facundo Arrizabalaga",
+  location: "Lesbos, Greece",
+  date: "28 DECEMBER 2015",
+  compassionScale: "45"
+  },
+  {
+  articleUrl: "https://www.ted.com/talks/jeremy_rifkin_on_the_empathic_civilization",
+  title: "The Empathic Civilization",
+  description: "In this talk from RSA Animate, bestselling author Jeremy Rifkin investigates the evolution of empathy and the profound ways it has shaped human development and society.",
+  imageUrl: "https://i.ytimg.com/vi/zDZFcDGpL4U/maxresdefault.jpg",
+  author: "Jeremy Rifkin",
+  location: " ",
+  date: "Aug, 2010",
+  compassionScale: "50"
+  },
+  {
+  articleUrl: "http://nymag.com/scienceofus/2016/02/caribbean-whales-have-regional-accents.html",
+  title: "It Turns Out Some Whales Have Regional Accents",
+  description: "Whales might not have opposable thumbs or manipulative digits, but they do rival human beings when it comes to brainpower.",
+  imageUrl: "https://pixel.nymag.com/imgs/daily/science/2016/02/12/12-whale-sad.w536.h357.2x.jpg",
+  author: "Claire Landsbaum",
+  location: "Carribean",
+  date: "February 16, 2016",
+  compassionScale: " "
+  },
+  {
   articleUrl: "https://interactive.aljazeera.com/aje/shorts/india-menstruation-man/index.html",
   title: "India's Menstruation Man",
   description: "Arunachalam Muruganantham was obsessed with making the perfect sanitary pad for his wife. After years of work, his invention has changed the lives of millions of women in India.",
@@ -19,6 +49,16 @@ var articlesList = [
   author: "Dirk Gilson",
   location: "South India",
   date: "1998",
+  compassionScale: "50"
+  },
+  {
+  articleUrl: "https://www.ted.com/talks/jamila_lyiscott_3_ways_to_speak_english",
+  title: "Jamila Lyiscott: 3 ways to speak English",
+  description: "Jamila Lyiscott is a “tri-tongued orator;” in her powerful spoken-word essay “Broken English,”...",
+  imageUrl: "http://cdn2.hubspot.net/hubfs/451100/ted.jpg",
+  author: "Jamila Lyiscott",
+  location: " ",
+  date: "February 2010",
   compassionScale: "50"
   },
   {
@@ -39,17 +79,17 @@ var articlesList = [
   author: "reuters",
   location: "USA",
   date: "11 SEPTEMBER 2014",
-  compassionScale: "50"
+  compassionScale: "20"
   },
   {
-  articleUrl: "https://mashable.com/2016/07/24/munich-shooting-facebook-post/#HulKR03jAZqb",
-  title: "Munich shooter may have used Facebook post to lure victims",
-  description: "The gunman who murdered nine people at a Munich mall Friday may have attempted to lure young people to the scene of the crime with a fake Facebook post offering free food.",
-  imageUrl: "http://www.aljazeera.com/mritems/imagecache/mbdxxlarge/mritems/Images/2014/9/12//20149122324039734_20.jpg",
-  author: "ARIEL BOGLE",
-  location: "Munich, Germany",
-  date: "July 23, 2016",
-  compassionScale: "1"
+  articleUrl: "http://www.theatlantic.com/politics/archive/2016/07/disputed-influence-of-black-lives-matter/492704/",
+  title: "The Disputed Influence of Black Lives Matter",
+  description: "Research suggests the movement affects voting behavior among African Americans in different ways.",
+  imageUrl: "https://cdn.theatlantic.com/assets/media/img/mt/2016/07/AP_081104023882/lead_960.jpg?1469219260",
+  author: "THEODORE R. JOHNSON",
+  location: "Philadelphia, PA",
+  date: "JUL 25, 2016",
+  compassionScale: ""
   },
   {
   articleUrl: "https://orgs.law.harvard.edu/docstudio/films/",
@@ -59,6 +99,56 @@ var articlesList = [
   author: " ",
   location: " ",
   date: " ",
+  compassionScale: " "
+  },
+  {
+  articleUrl: "http://nymag.com/scienceofus/2016/07/why-pokmon-go-might-actually-be-helping-kids-with-autism.html",
+  title: "How Pokémon Go Might Actually Be Helping Kids With Autism",
+  description: "If you’ve been following coverage of Pokémon Go, the mobile game that has ...",
+  imageUrl: "http://pixel.nymag.com/imgs/daily/intelligencer/2016/07/19/19-pokemon-go.w710.h473.2x.jpg",
+  author: " ",
+  location: " ",
+  date: " ",
+  compassionScale: " "
+  },
+  {
+  articleUrl: "http://nymag.com/scienceofus/2016/07/the-charles-kinsey-shooting-shows-police-still-have-a-mental-illness-problem.html",
+  title: "The Charles Kinsey Shooting Shows Police Still Have a Mental-Illness Problem",
+  description: "Unfortunately, there is no shortage of recent, depressing violent encounters between the police and people with mental illness, many of those encounters ending in tragedy. ",
+  imageUrl: "http://pixel.nymag.com/imgs/daily/science/2016/07/21/21-unarmed-man.w710.h473.2x.jpg",
+  author: "Jesse Singal",
+  location: " ",
+  date: "July 21, 2016",
+  compassionScale: " "
+  },
+  {
+  articleUrl: "https://i-d.vice.com/en_gb/article/ai-weiwei-and-patti-smith-part-of-artangel-project-at-prison-oscar-wilde-was-sent-to-for-being-gay",
+  title: "​ai weiwei and patti smith part of artangel project at prison oscar wilde was sent to for being gay",
+  description: "The major new site-specific project will bring a group of the best artists and writers in the world to Reading Prison, where Wilde was incarcerated during the 1890s.",
+  imageUrl: "https://i-d-images.vice.com/images/2016/07/21/untitled-article-1469096930-body-image-1469097372.jpg?output-quality=75",
+  author: "Charlotte Gush",
+  location: " ",
+  date: "21 July, 2016",
+  compassionScale: " "
+  },
+  {
+  articleUrl: "http://motherboard.vice.com/read/machine-learning-algorithm-spots-depression-based-on-speech-patterns",
+  title: "​Machine Learning Algorithm Spots Depression in Speech Patterns",
+  description: "The major new site-specific project will bring a group of the best artists and writers in the world to Reading Prison, where Wilde was incarcerated during the 1890s.",
+  imageUrl: "https://i-d-images.vice.com/images/2016/07/21/untitled-article-1469096930-body-image-1469097372.jpg?output-quality=75",
+  author: "Charlotte Gush",
+  location: " ",
+  date: "July 9, 2016",
+  compassionScale: " "
+  },
+  {
+  articleUrl: "http://nymag.com/scienceofus/2016/07/why-conservatives-band-together-fast.html",
+  title: "The Psychological Reason Conservatives Band Together Faster Than Liberals",
+  description: "When Donald Trump picked the Mulan-hating, Titanic-loving gubernatorial goober Mike Pence to be his vice-presidential pick, he said that it was about “party unity.” ",
+  imageUrl: "http://pixel.nymag.com/imgs/daily/science/2016/07/21/21-conservative-psychology.w710.h473.2x.jpg",
+  author: "Drake Baer",
+  location: "Washington, DC ",
+  date: "July 22, 2016",
   compassionScale: " "
   }
 ];
@@ -169,8 +259,8 @@ db.TagWord.create(tagWordObj0, function(err, tagWordSuccess) {
         if (err) {console.log(err);}
         console.log("Tag Word - Culture created.");
 
-        db.Article.findOne({title: "Munich shooter may have used Facebook post to lure victims"}, function(err, munichShooter) {
-          db.ArticleTagWord.create({_article: munichShooter._id,
+        db.Article.findOne({title: "It Turns Out Some Whales Have Regional Accents"}, function(err, itTurnsOutSomeWhales) {
+          db.ArticleTagWord.create({_article: itTurnsOutSomeWhales._id,
           _tagWord: tagWordCulture._id}, function thirdJoinMade(err,success){
             if (err) {console.log(err);}
             console.log(success);

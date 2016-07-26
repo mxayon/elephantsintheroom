@@ -7,6 +7,10 @@ $(document).ready(function() {
 
   $.get('/api/articles', onSuccess);
 
+  $('.navbar-brand').on('click', function(e){
+      onSuccess(articles);
+  });
+
   $('#majorIssues').on('click', function(e){
     $.get('/api/articleTagWords/5796ca17a5d21536bad9ad7b/articles', onSuccessMajorIssues);
   });
@@ -43,7 +47,6 @@ $(document).ready(function() {
 /////end document ready//////
 });
 
-// var $currentCarousel = $(".container-carousel");
 
 function onSuccessMajorIssues(articles) {
   console.log('FOUND ALL MajorIssuesArticles', articles);
@@ -53,10 +56,10 @@ function onSuccessMajorIssues(articles) {
 }
 
 function renderMajor(article) {
-  var articleHtml = $('#articles-template').html();
-  var articleTemplate = Handlebars.compile(articleHtml);
-  var html = articleTemplate(article);
-  $('.articlesShow').empty();
+  var majorArticlesHtml = $('#articles-template').html();
+  var majorArticlesTemplate = Handlebars.compile(majorArticlesHtml);
+  var html = majorArticlesTemplate(article);
+  // $('.articlesShow').empty();
   // $currentCarousel.find('articlesList').append(html);
   $('.articlesShow').prepend(html);
 }
@@ -69,11 +72,10 @@ function onSuccessCommunication(articles) {
 }
 
 function renderCommunication(article) {
-  var articleHtml = $('#articles-template').html();
-  var articleTemplate = Handlebars.compile(articleHtml);
-  var html = articleTemplate(article);
-  $('.articlesShow').empty();
-  // $currentCarousel.find('articlesList').append(html);
+  var commArticlesHtml = $('#articles-template').html();
+  var commArticlesTemplate = Handlebars.compile(commArticlesHtml);
+  var html = commArticlesTemplate(article);
+  // $('.articlesShow').empty();
   $('.articlesShow').prepend(html);
 }
 
@@ -86,10 +88,10 @@ function onSuccessCulture(articles) {
 }
 
 function renderCulture(article) {
-  var articleHtml = $('#articles-template').html();
-  var articleTemplate = Handlebars.compile(articleHtml);
-  var html = articleTemplate(article);
-  $('.articlesShow').empty();
+  var culArticlesHtml = $('#articles-template').html();
+  var culArticlesTemplate = Handlebars.compile(culArticlesHtml);
+  var html = culArticlesTemplate(article);
+  // $('.articlesShow').empty();
   // $currentCarousel.find('articlesList').append(html);
   $('.articlesShow').prepend(html);
 }
@@ -102,10 +104,10 @@ function onSuccessConnection(articles) {
 }
 
 function renderConnection(article) {
-  var articleHtml = $('#articles-template').html();
-  var articleTemplate = Handlebars.compile(articleHtml);
-  var html = articleTemplate(article);
-  $('.articlesShow').empty();
+  var concArticlesHtml = $('#articles-template').html();
+  var concArticlesTemplate = Handlebars.compile(concArticlesHtml);
+  var html = concArticlesTemplate(article);
+  // $('.articlesShow').empty();
   // $currentCarousel.find('articlesList').append(html);
   $('.articlesShow').prepend(html);
 }
@@ -123,4 +125,19 @@ function onSuccess(articles) {
   articles.forEach(function (article){
     renderArticles(article);
   });
+}
+
+function onSuccessClick(articles) {
+  console.log('FOUND ALL PIECES', articles);
+  articles.forEach(function (article){
+    renderArticlesClick(article);
+  });
+}
+
+function renderArticlesClick(article) {
+  var articleHtmlClick = $('#articles-template').html();
+  var articleTemplate = Handlebars.compile(articleHtmlClick);
+  var html = articleTemplate(article);
+  // $currentCarousel.find('articlesList').append(html);
+  $('.articlesShow').prepend(html);
 }
