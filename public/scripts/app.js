@@ -5,7 +5,7 @@ $(document).ready(function() {
 
   // $.get('/api/articleTagWords/5796ca17a5d21536bad9ad7b/articles', onSuccessMajorIssues);
 
-  $.get('/api/articleTagWords/5796ca17a5d21536bad9ad7b/articles', onSuccessMajorIssues);
+  $.get('/api/articles', onSuccess);
 
   $('#majorIssues').on('click', function(e){
     $.get('/api/articleTagWords/5796ca17a5d21536bad9ad7b/articles', onSuccessMajorIssues);
@@ -32,7 +32,7 @@ $(document).ready(function() {
       console.log('formData', formData);
       $.post('/api/articles', formData, function(articles) {
       console.log('article after POST', articles);
-      renderArticles(article);  //render the server's response
+      renderArticles(articles);  //render the server's response
       });
       $(this).trigger("reset");
       $('form input').val('');
@@ -48,8 +48,17 @@ $(document).ready(function() {
 function onSuccessMajorIssues(articles) {
   console.log('FOUND ALL MajorIssuesArticles', articles);
   articles.forEach(function (article){
-    renderArticles(article);
+    renderMajor(article);
 });
+}
+
+function renderMajor(article) {
+  var articleHtml = $('#articles-template').html();
+  var articleTemplate = Handlebars.compile(articleHtml);
+  var html = articleTemplate(article);
+  $('.articlesShow').empty();
+  // $currentCarousel.find('articlesList').append(html);
+  $('.articlesShow').prepend(html);
 }
 
 function onSuccessCommunication(articles) {
@@ -81,9 +90,9 @@ function renderArticles(article) {
   $('.articlesShow').prepend(html);
 }
 //
-// function onSuccess(articles) {
-//   console.log('FOUND ALL PIECES', articles);
-//   articles.forEach(function (article){
-//     renderArticles(article);
-//   });
-// }
+function onSuccess(articles) {
+  console.log('FOUND ALL PIECES', articles);
+  articles.forEach(function (article){
+    renderArticles(article);
+  });
+}

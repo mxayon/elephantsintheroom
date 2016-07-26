@@ -18,6 +18,12 @@ function show(req, res) {
 });
 }
 function create(req, res) {
+  // after creation of article below, you have to find the tag word from the database using the params
+  // after you have found the tag word
+  // you take the article id and the tag word id and create a new ArticleTagWord using those ids
+  // for example ArticleTagWord.create({_article: articl._id, _tagWord: tagword._id}, function(err, atagword) {
+  //  res.json(atagword);
+  // });
   db.Article.create(req.body, function(err, article) {
     if (err) { console.log('error', err); }
     console.log(article);

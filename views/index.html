@@ -136,9 +136,14 @@
 <!-- ////////////// -->
            <!-- Textarea -->
            <div class="form-group">
-             <label class="col-md-4 control-label" for="tagWords">Categories</label>
+             <label class="col-md-4 control-label" for="tagWords">Tag Words</label>
              <div class="col-md-4">
-               <textarea class="form-control" id="tagWords" name="tagWords">Current Issues, Communication, Culture, Connection.</textarea>
+               <select name="tagWordsDrop">
+                 <option value="majorIssues">Major Issues and Events</option>
+                 <option value="communication">Communication</option>
+                 <option value="culture">Culture</option>
+                 <option value="connection">Connection</option>
+               </select>
              </div>
            </div>
 
