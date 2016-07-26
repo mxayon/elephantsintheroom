@@ -19,7 +19,7 @@ Bootstrap : Media thumbnails, grid system
 
 
 
-![elephantsintheroom:]("/../images/elephantsintheroom.png")
+![elephantsintheroom:]("/../public/images/elephantsintheroom.png")
 
 USER LANDS ON LANDING PAGE
 - User is greeted Articles and Navigation Bar located on the top.
