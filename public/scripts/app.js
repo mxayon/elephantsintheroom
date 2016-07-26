@@ -4,9 +4,7 @@ $(document).ready(function() {
   $.get('/api/articles', onSuccess);
 
   $('.navbar-brand').on('click', function(e){
-      var articles;
-      console.log(articles);
-      onSuccessTest(articles);
+      $.get('/api/articles', onSuccess);
   });
 
   $('#majorIssues').on('click', function(e){
@@ -133,20 +131,10 @@ function renderArticles(article) {
   $('.articlesShow').prepend(html);
 }
 //
-function onSuccess(articlestest) {
-  console.log('FOUND ALL PIECES', articlestest);
-    articles = articlestest;
+function onSuccess(articles) {
+  console.log('FOUND ALL PIECES', articles);
 
-  articlestest.forEach(function (article){
-    renderArticles(article);
-  });
-}
-
-function onSuccessTest(articlestest) {
-  console.log('FOUND ALL ', articlestest);
-
-
-  articlestest.forEach(function (article){
+  articles.forEach(function (article){
     renderArticles(article);
   });
 }
