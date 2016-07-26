@@ -12,19 +12,19 @@ $(document).ready(function() {
   });
 
   $('#majorIssues').on('click', function(e){
-    $.get('/api/articleTagWords/5796ca17a5d21536bad9ad7b/articles', onSuccessMajorIssues);
+    $.get('/api/articleTagWords/579737bf5ee79963e88f8ccd/articles', onSuccessMajorIssues);
   });
 
   $('#communication').on('click', function(e){
-    $.get('/api/articleTagWords/5796ca17a5d21536bad9ad88/articles', onSuccessCommunication);
+    $.get('/api/articleTagWords/579737bf5ee79963e88f8cec/articles', onSuccessCommunication);
   });
 
   $('#culture').on('click', function(e){
-    $.get('/api/articleTagWords/5796ca17a5d21536bad9ad89/articles', onSuccessCulture);
+    $.get('/api/articleTagWords/579737bf5ee79963e88f8ced/articles', onSuccessCulture);
   });
 
   $('#connection').on('click', function(e){
-    $.get('/api/articleTagWords/5796ca17a5d21536bad9ad8a/articles', onSuccessConnection);
+    $.get('/api/articleTagWords/579737bf5ee79963e88f8cee/articles', onSuccessConnection);
   });
 
 
