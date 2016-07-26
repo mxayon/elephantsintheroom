@@ -49,25 +49,23 @@ $(document).ready(function() {
 });
 
 function handleDeleteArticleClick(e) {
+  e.preventDefault();
  console.log("DELETE CALLED");
  var articleId = $(this).parents('.articlesShow').data('article-id');
- console.log('someone wants to delete article id=' + articleId );
- $.ajax({
-   url: '/api/articles/' + articleId,
+ console.log('someone wants to delete article');
+ $.ajax ({
    method: 'DELETE',
-   success: handleDeleteArticleSuccess
+   url: '/api/articles/' + articleId,
+   success: handleDeleteArticleSuccess,
  });
-}
+ }
 
 // callback after DELETE /api/albums/:id
 function handleDeleteArticleSuccess(article) {
- var deletedArticle = article;
+ var deletedArticleId = article._id;
  console.log('removing the following article from the page:', deletedArticle);
- var divToRemove = 'div[data-article-id=' + deletedArticle._id + ']';
- console.log(divToRemove);
- $(divToRemove).remove();
+ $('div[data-artist-id=' + deletedArticleId + ']').remove();
 }
-
 
 function onSuccessMajorIssues(articles) {
   console.log('FOUND ALL MajorIssuesArticles', articles);
