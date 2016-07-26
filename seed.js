@@ -172,29 +172,10 @@ db.ArticleTagWord.remove({}, function(err, succ) {
 db.TagWord.create(tagWordObj0, function(err, tagWordSuccess) {
   if(err){console.log("ERROR: ", err);}
   console.log("Created TagWord!");
-///////////create articles
+
   db.Article.create(articlesList, function(err, articles) {
     if (err) {console.log(err);}
     console.log("Created Articles");
-      // articlesList.forEach(function (articleData) {
-      //   var article = new db.Article({
-      //     articleUrl: articleData.articleUrl,
-      //     title: articleData.title,
-      //     description: articleData.description,
-      //     imageUrl: articleData.imageUrl,
-      //     author: articleData.author,
-      //     location: articleData.location,
-      //     date: articleData.date,
-      //     compassionScale: articleData.compassionScale
-      //   });
-      //     article.save(function(err, savedArticle){
-      //       if (err) {
-      //         return console.log(err);
-      //       }
-      //       console.log('saved ' + savedArticle.title);
-      //     });
-      // });
-//////////////for each article join table
       articles.forEach(function(article) {
       var joinTableData = {
         _article: article._id,
@@ -202,7 +183,6 @@ db.TagWord.create(tagWordObj0, function(err, tagWordSuccess) {
       };
       db.ArticleTagWord.create(joinTableData, function(err, suc) {
         if (err) {console.log(err);}
-
         console.log("Created Join Table Entry: ");
         console.log(suc + '\n');
         });
@@ -212,7 +192,6 @@ db.TagWord.create(tagWordObj0, function(err, tagWordSuccess) {
         console.log("ALL JOINS: " ,suc);
       });
 
-/////// tag word obj3
       db.TagWord.create(tagWordObj3, function handleNewTagWord(err, tagWordCommunication){
         if (err) {console.log(err);}
         console.log("Tag Word - Communication created.");
@@ -227,7 +206,6 @@ db.TagWord.create(tagWordObj0, function(err, tagWordSuccess) {
 
       });
       db.Article.findOne({title: "The Harvard Law Documentary Studio"}, function(err, theHarvardLawDocumentaryStudio) {
-
         db.ArticleTagWord.find({article: theHarvardLawDocumentaryStudio._id}, function allTheHarvardLawDocumentaryStudio(err,success){
           if (err) {console.log(err);}
           console.log(success.length);
@@ -239,7 +217,7 @@ db.TagWord.create(tagWordObj0, function(err, tagWordSuccess) {
           });
         });
       });
-  ///// obj 2
+
       db.TagWord.create(tagWordObj2, function handleNewTagWord(err, tagWordCulture){
         if (err) {console.log(err);}
         console.log("Tag Word - Culture created.");
@@ -267,7 +245,6 @@ db.TagWord.create(tagWordObj0, function(err, tagWordSuccess) {
         });
       });
 
-///// obj 1
       db.TagWord.create(tagWordObj1, function handleNewTagWord(err, tagWordConnection){
         if (err) {console.log(err);}
         console.log("Tag Word - Connection created.");
@@ -300,7 +277,6 @@ db.TagWord.create(tagWordObj0, function(err, tagWordSuccess) {
 
   });
 
-  /*  depopulate and return instructors */
   db.TagWord.findOne({
     name: "Communication"
   },

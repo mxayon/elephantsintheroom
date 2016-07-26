@@ -6,16 +6,12 @@ body {
     height: 100%;
 }
 
-
 .thumbnail {
   display: grid;
   float: left;
   width: auto;
   height: 700px;
 }
-
-
-
 
 .navbar {
         padding: 2px 0;

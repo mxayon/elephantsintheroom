@@ -23,16 +23,13 @@ $(document).ready(function() {
     $.get('/api/articleTagWords/579737bf5ee79963e88f8cee/articles', onSuccessConnection);
   });
 
-
-
-////////form input works!!!!
   $('#article-form form').on('submit', function(e) {
       e.preventDefault();
       var formData = $(this).serialize();
       console.log('formData', formData);
       $.post('/api/articles', formData, function(articles) {
       console.log('article after POST', articles);
-      renderArticles(articles);  //render the server's response
+      renderArticles(articles);
       });
       $(this).trigger("reset");
       $('form input').val('');
@@ -40,8 +37,6 @@ $(document).ready(function() {
 
   $('.articlesShow').on('click', '.deleteBtn', handleDeleteArticleClick);
 
-
-/////end document ready//////
 });
 
 function handleDeleteArticleClick(e) {

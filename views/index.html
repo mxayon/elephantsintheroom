@@ -19,148 +19,150 @@
     <!-- APPLICATION SCRIPTS -->
     <script src="scripts/app.js"></script>
 </head>
+
 <body>
 
-  <div id="nav">
-  <div class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="80">
-    <div class="container">
-      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <a href="#" class="navbar-brand">Elephants in the Room</a>
-      <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="glyphicon glyphicon-bar"></span>
-        <span class="glyphicon glyphicon-bar"></span>
-        <span class="glyphicon glyphicon-bar"></span>
-      </a>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="#" id="majorIssues">Major Issues and Current Events</a></li>
-          <li><a href="#" id="communication">Communication</a></li>
-          <li><a href="#" id="culture">Culture</a></li>
-          <li><a href="#" id="connection">Connection</a></li>
-        </ul>
-        <ul class="nav pull-right navbar-nav">
-          <li>
-           <a href="#add" id="disclaimer"> Please add some articles to our database.</a>
-          </li>
-        </ul>
-      </div>
+    <div id="nav">
+        <div class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="80">
+            <div class="container">
+                <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                <a href="#" class="navbar-brand">Elephants in the Room</a>
+                <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="glyphicon glyphicon-bar"></span>
+                    <span class="glyphicon glyphicon-bar"></span>
+                    <span class="glyphicon glyphicon-bar"></span>
+                </a>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" id="majorIssues">Major Issues and Current Events</a></li>
+                        <li><a href="#" id="communication">Communication</a></li>
+                        <li><a href="#" id="culture">Culture</a></li>
+                        <li><a href="#" id="connection">Connection</a></li>
+                    </ul>
+                    <ul class="nav pull-right navbar-nav">
+                        <li>
+                            <a href="#add" id="disclaimer"> Please add some articles to our database.</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /.navbar -->
     </div>
-  </div><!-- /.navbar -->
-  </div>
     <!-- ///////////// JUMBO TRON STart//////// -->
     <div class="jumbotron text-center">
         <div class="container">
             <h1>Elephants in the Room </h1>
             <h5>: an <strong>obvious major problem</strong> or issue that people avoid discussing or acknowledging</h5>
         </div>
-            <p> <a class="btn btn-default page-scroll" href="#add">Add some Elephants </a></p>
+        <p> <a class="btn btn-default page-scroll" href="#add">Add some Elephants </a></p>
     </div>
 
 
-<div class="container-fluid">
+    <div class="container-fluid">
 
 
 
-      <div class="articlesShow">
-        <script id="articles-template" type="text/x-handlebars-template">
-          <div class="col-sm-3 col-md-3 col-lg-3">
-          <div class="thumbnail bg"  data-article-id={{_id}}>
-            <img src="{{imageUrl}}" class="img-responsive" alt="Responsive image">
-            <div class="caption">
-              <h4>{{title}}</h4>
-              <h5>{{description}}</h5>
-              <h5>{{date}}</h5>
-              <h5><a href="{{articleUrl}}">{{title}}</a></h5>
-              <h5>{{author}}</h5>
-              <h5>{{location}}</h5>
-              <button type="button" name="button" class="deleteBtn btn btn-danger pull-right">
-                Delete</button>
-            </div>
-          </div>
-          </div>
-        </script>
-      </div>
+        <div class="articlesShow">
+            <script id="articles-template" type="text/x-handlebars-template">
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                    <div class="thumbnail bg" data-article-id={{_id}}>
+                        <img src="{{imageUrl}}" class="img-responsive" alt="Responsive image">
+                        <div class="caption">
+                            <h4>{{title}}</h4>
+                            <h5>{{description}}</h5>
+                            <h5>{{date}}</h5>
+                            <h5><a href="{{articleUrl}}">{{title}}</a></h5>
+                            <h5>{{author}}</h5>
+                            <h5>{{location}}</h5>
+                            <button type="button" name="button" class="deleteBtn btn btn-danger pull-right">
+                                Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </script>
+        </div>
 
 
 
 
 
-</div>
+    </div>
 
-<!-- /////// begin form  -->
+    <!-- /////// begin form  -->
     <a name="add">
-    <section id='article-form' class="container">
-     <div class="row">
-     <div class="col-md-10 col-md-offset-1">
+        <section id='article-form' class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
 
-       <form class="form-horizontal">
-         <fieldset>
+                    <form class="form-horizontal">
+                        <fieldset>
 
-           <!-- Form Name -->
-           <legend>Add New Article</legend>
+                            <!-- Form Name -->
+                            <legend>Add New Article</legend>
 
-           <!-- Text input-->
-           <div class="form-group">
-             <label class="col-md-4 control-label" for="title">Article Title</label>
-             <div class="col-md-4">
-             <input id="title" name="title" type="text" placeholder="" class="form-control input-md" required="">
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="title">Article Title</label>
+                                <div class="col-md-4">
+                                    <input id="title" name="title" type="text" placeholder="" class="form-control input-md" required="">
 
-             </div>
-           </div>
+                                </div>
+                            </div>
 
-           <!-- Text input-->
-           <div class="form-group">
-             <label class="col-md-4 control-label" for="articleUrl">Article Url</label>
-             <div class="col-md-4">
-             <input id="articleUrl" name="articleUrl" type="text" placeholder="Ariticle URL" class="form-control input-md">
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="articleUrl">Article Url</label>
+                                <div class="col-md-4">
+                                    <input id="articleUrl" name="articleUrl" type="text" placeholder="Ariticle URL" class="form-control input-md">
 
-             </div>
-           </div>
+                                </div>
+                            </div>
 
-           <!-- Text input-->
-           <div class="form-group">
-             <label class="col-md-4 control-label" for="description">Brief Description</label>
-             <div class="col-md-4">
-             <input id="description" name="description" type="text" placeholder="description" class="form-control input-md">
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="description">Brief Description</label>
+                                <div class="col-md-4">
+                                    <input id="description" name="description" type="text" placeholder="description" class="form-control input-md">
 
-             </div>
-           </div>
-<!-- ///////////// -->
-           <div class="form-group">
-             <label class="col-md-4 control-label" for="imageUrl">Article Image</label>
-             <div class="col-md-4">
-             <input id="imageUrl" name="imageUrl" type="url" placeholder="Article Image Url" class="form-control input-md">
+                                </div>
+                            </div>
+                            <!-- ///////////// -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="imageUrl">Article Image</label>
+                                <div class="col-md-4">
+                                    <input id="imageUrl" name="imageUrl" type="url" placeholder="Article Image Url" class="form-control input-md">
 
-             </div>
-           </div>
-<!-- ////////////// -->
-           <!-- Textarea -->
-           <div class="form-group">
-             <label class="col-md-4 control-label" for="tagWords">Tag Words</label>
-             <div class="col-md-4">
-               <select name="tagWordsDrop">
-                 <option value="majorIssues">Major Issues and Events</option>
-                 <option value="communication">Communication</option>
-                 <option value="culture">Culture</option>
-                 <option value="connection">Connection</option>
-               </select>
-             </div>
-           </div>
+                                </div>
+                            </div>
+                            <!-- ////////////// -->
+                            <!-- Textarea -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="tagWords">Tag Words</label>
+                                <div class="col-md-4">
+                                    <select name="tagWordsDrop">
+                                        <option value="majorIssues">Major Issues and Events</option>
+                                        <option value="communication">Communication</option>
+                                        <option value="culture">Culture</option>
+                                        <option value="connection">Connection</option>
+                                    </select>
+                                </div>
+                            </div>
 
 
-           <!-- Button -->
-           <div class="form-group">
-             <label class="col-md-4 control-label" for="singlebutton">Save Article</label>
-             <div class="col-md-4">
-               <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
-             </div>
-           </div>
-         </fieldset>
-       </form>
-     </div>
-     </div>
-   </section>
-   </a>
+                            <!-- Button -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="singlebutton">Save Article</label>
+                                <div class="col-md-4">
+                                    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </a>
 
 </body>
 

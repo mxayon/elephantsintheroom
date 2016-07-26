@@ -33,7 +33,6 @@ function create(req, res) {
 
 function destroy(req, res) {
   db.Article.findOneAndRemove({ _id: req.params.articleId }, function(err, foundArticle){
-// note you could send just send 204, but we're sending 200 and the deleted entity
   console.log("destroyed album : ", foundArticle);
   res.json(foundArticle);
   });
