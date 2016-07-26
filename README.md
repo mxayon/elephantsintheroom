@@ -5,6 +5,8 @@ Elephants In the Room
 Elephants in the Room Goals:::::::::
 ////////////////////
 
+**** currently still in demo mode. if you are a developer and need to look at code please keep in mind that TagWords on nav bar are hard coded in with tagword Ids through app.js ***********
+
 
 Elephants in the room is an article database that tries to cover all hard hitting issues.
 Categories or TagWords are cut down to 4 classifications.
