@@ -17,9 +17,9 @@ HTML / CSS
 Bootstrap : Media thumbnails, grid system
 
 
+heroku project link : https://frozen-plains-43549.herokuapp.com/
 
-
-![elephantsintheroom:](http://imgur.com/a/7xMOw)
+![elephantsintheroom:](http://imgur.com/a/7xMOw.png)
 
 USER LANDS ON LANDING PAGE
 - User is greeted Articles and Navigation Bar located on the top.
