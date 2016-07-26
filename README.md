@@ -5,7 +5,7 @@ Elephants In the Room
 Elephants in the Room Goals:::::::::
 ////////////////////
 
-![elephantsintheroom]("../images/elephantsintheroom.jpg")
+![elephantsintheroom]("./images/elephantsintheroom.jpg")
 
 
 **** currently still in demo mode. if you are a developer and need to look at code please keep in mind that TagWords on nav bar are hard coded in with tagword Ids through app.js ***********
