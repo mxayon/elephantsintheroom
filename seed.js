@@ -8,18 +8,16 @@ var articlesList = [
   imageUrl: "http://motherboard-images.vice.com/content-images/contentimage/35821/1469026202421104.png",
   author: "Victoria Turk",
   location: "Washington University",
-  date: "July 20, 2016",
-  compassionScale: "50"
+  date: "July 20, 2016"
   },
   {
-  articleUrl: "http://www.aljazeera.com/news/2015/12/ai-wei-wei-photos-lesbos-capture-refugee-life-151229053732453.html",
-  title: "Ai Weiwei's photos from Lesbos capture refugee life",
-  description: "Chinese artist shares images and videos, drawing attention to plight of thousands of refugees arriving in Greece.",
-  imageUrl: "http://www.aljazeera.com/mritems/imagecache/mbdxxlarge/mritems/Images/2015/12/29/0ed919c3cdc44a3db74d57660b4d3775_18.jpg",
-  author: "Facundo Arrizabalaga",
-  location: "Lesbos, Greece",
-  date: "28 DECEMBER 2015",
-  compassionScale: "45"
+  articleUrl: "https://broadly.vice.com/en_us/article/why-is-it-so-hard-to-fight-child-sex-trafficking-on-backpagecom",
+  title: "Why Is It So Hard to Fight Child Sex Trafficking on Backpage.com?",
+  description: "According to the Center for Missing and Exploited Children, 71 percent of child sex trafficking cases reported come from Backpage listings, nevertheless law enforcement seems powerless to stop it.",
+  imageUrl: "https://broadly-images.vice.com/images/articles/meta/2016/07/25/the-crimes-of-backpagecom-and-why-they-are-so-hard-to-stop-1469460506.jpg?crop=1xw:1xh;center,top&resize=2000:*&output-quality=70",
+  author: "Matt Ramos",
+  location: " ",
+  date: "JUL 25 2016"
   },
   {
   articleUrl: "https://www.ted.com/talks/jeremy_rifkin_on_the_empathic_civilization",
@@ -28,8 +26,7 @@ var articlesList = [
   imageUrl: "https://i.ytimg.com/vi/zDZFcDGpL4U/maxresdefault.jpg",
   author: "Jeremy Rifkin",
   location: " ",
-  date: "Aug, 2010",
-  compassionScale: "50"
+  date: "Aug, 2010"
   },
   {
   articleUrl: "http://nymag.com/scienceofus/2016/02/caribbean-whales-have-regional-accents.html",
@@ -38,8 +35,7 @@ var articlesList = [
   imageUrl: "https://pixel.nymag.com/imgs/daily/science/2016/02/12/12-whale-sad.w536.h357.2x.jpg",
   author: "Claire Landsbaum",
   location: "Carribean",
-  date: "February 16, 2016",
-  compassionScale: " "
+  date: "February 16, 2016"
   },
   {
   articleUrl: "https://interactive.aljazeera.com/aje/shorts/india-menstruation-man/index.html",
@@ -102,16 +98,6 @@ var articlesList = [
   compassionScale: " "
   },
   {
-  articleUrl: "http://nymag.com/scienceofus/2016/07/why-pokmon-go-might-actually-be-helping-kids-with-autism.html",
-  title: "How Pokémon Go Might Actually Be Helping Kids With Autism",
-  description: "If you’ve been following coverage of Pokémon Go, the mobile game that has ...",
-  imageUrl: "http://pixel.nymag.com/imgs/daily/intelligencer/2016/07/19/19-pokemon-go.w710.h473.2x.jpg",
-  author: " ",
-  location: " ",
-  date: " ",
-  compassionScale: " "
-  },
-  {
   articleUrl: "http://nymag.com/scienceofus/2016/07/the-charles-kinsey-shooting-shows-police-still-have-a-mental-illness-problem.html",
   title: "The Charles Kinsey Shooting Shows Police Still Have a Mental-Illness Problem",
   description: "Unfortunately, there is no shortage of recent, depressing violent encounters between the police and people with mental illness, many of those encounters ending in tragedy. ",
@@ -119,6 +105,16 @@ var articlesList = [
   author: "Jesse Singal",
   location: " ",
   date: "July 21, 2016",
+  compassionScale: " "
+  },
+  {
+  articleUrl: "http://nymag.com/scienceofus/2016/07/why-pokmon-go-might-actually-be-helping-kids-with-autism.html",
+  title: "How Pokémon Go Might Actually Be Helping Kids With Autism",
+  description: "If you’ve been following coverage of Pokémon Go, the mobile game that has ...",
+  imageUrl: "http://pixel.nymag.com/imgs/daily/intelligencer/2016/07/19/19-pokemon-go.w710.h473.2x.jpg",
+  author: " ",
+  location: " ",
+  date: " ",
   compassionScale: " "
   },
   {
@@ -135,7 +131,7 @@ var articlesList = [
   articleUrl: "http://motherboard.vice.com/read/machine-learning-algorithm-spots-depression-based-on-speech-patterns",
   title: "​Machine Learning Algorithm Spots Depression in Speech Patterns",
   description: "The major new site-specific project will bring a group of the best artists and writers in the world to Reading Prison, where Wilde was incarcerated during the 1890s.",
-  imageUrl: "https://i-d-images.vice.com/images/2016/07/21/untitled-article-1469096930-body-image-1469097372.jpg?output-quality=75",
+  imageUrl: "https://assets.pando.com/uploads/2014/02/motherboard.jpg",
   author: "Charlotte Gush",
   location: " ",
   date: "July 9, 2016",
@@ -268,9 +264,9 @@ db.TagWord.create(tagWordObj0, function(err, tagWordSuccess) {
         });
 
       });
-      db.Article.findOne({title: "Munich shooter may have used Facebook post to lure victims"}, function(err, munichShooter) {
+      db.Article.findOne({title: "It Turns Out Some Whales Have Regional Accents"}, function(err, itTurnsOutSomeWhales) {
 
-        db.ArticleTagWord.find({article: munichShooter._id}, function allmunichShooter(err,success){
+        db.ArticleTagWord.find({article: itTurnsOutSomeWhales._id}, function allitTurnsOutSomeWhales(err,success){
           if (err) {console.log(err);}
           console.log(success.length);
           success.forEach(function(joinEntity){
