@@ -4,7 +4,9 @@ $(document).ready(function() {
   $.get('/api/articles', onSuccess);
 
   $('.navbar-brand').on('click', function(e){
-      onSuccess(articles);
+      var articles;
+      console.log(articles);
+      onSuccessTest(articles);
   });
 
   $('#majorIssues').on('click', function(e){
@@ -69,7 +71,8 @@ function renderMajor(article) {
   var majorArticlesHtml = $('#articles-template').html();
   var majorArticlesTemplate = Handlebars.compile(majorArticlesHtml);
   var html = majorArticlesTemplate(article);
-  // $('.articlesShow').empty();
+  console.log(article);
+  // $('.thumbnail').empty();
   // $currentCarousel.find('articlesList').append(html);
   $('.articlesShow').prepend(html);
 }
@@ -130,9 +133,20 @@ function renderArticles(article) {
   $('.articlesShow').prepend(html);
 }
 //
-function onSuccess(articles) {
-  console.log('FOUND ALL PIECES', articles);
-  articles.forEach(function (article){
+function onSuccess(articlestest) {
+  console.log('FOUND ALL PIECES', articlestest);
+    articles = articlestest;
+
+  articlestest.forEach(function (article){
+    renderArticles(article);
+  });
+}
+
+function onSuccessTest(articlestest) {
+  console.log('FOUND ALL ', articlestest);
+
+
+  articlestest.forEach(function (article){
     renderArticles(article);
   });
 }
