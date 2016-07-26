@@ -37,9 +37,9 @@ app.delete('/api/articles/:articleId', controllers.articles.destroy);
 
 app.put('/api/articles/:articleId', controllers.articles.update);
 
-app.get('/api/articleTagWords/:tagWordId/articles', function (req, res) {
+app.get('/api/articleTagWords/:tagWordId/articles/', function (req, res) {
   db.ArticleTagWord
-    .find({_tagWord: req.params.id})
+    .find({_tagWord: req.params.tagWordId})
     .exec(function(err, artTagWords){
       console.log(err);
 
@@ -49,7 +49,7 @@ app.get('/api/articleTagWords/:tagWordId/articles', function (req, res) {
       })
       .exec(function(err, articles){
         console.log(err);
-        console.log("Articles with Tag Id", req.params.id);
+        console.log("Articles with Tag Id", req.params.tagWordId);
         console.log(articles);
         res.json(articles);
       });

@@ -2,7 +2,7 @@ var db = require('./models');
 
 var articlesList = [
   {
-  articleUrl: "http://motherboard.vice.com/read/scientists-made-a-new-map-of-the-human-brain-cerebral-cortex",
+  articleUrl: "https://motherboard.vice.com/read/scientists-made-a-new-map-of-the-human-brain-cerebral-cortex",
   title: "Scientists Made a New Map of the Human Brain",
   description: "For centuries, scientists have tried to map out these areas in an attempt to better understand how the brain works. Now, researchers have published a new brain “atlas” that includes nearly 100 previously unmapped regions.",
   imageUrl: "http://motherboard-images.vice.com/content-images/contentimage/35821/1469026202421104.png",
@@ -12,7 +12,7 @@ var articlesList = [
   compassionScale: "50"
   },
   {
-  articleUrl: "http://interactive.aljazeera.com/aje/shorts/india-menstruation-man/index.html",
+  articleUrl: "https://interactive.aljazeera.com/aje/shorts/india-menstruation-man/index.html",
   title: "India's Menstruation Man",
   description: "Arunachalam Muruganantham was obsessed with making the perfect sanitary pad for his wife. After years of work, his invention has changed the lives of millions of women in India.",
   imageUrl: "/images/ajshortsindiamm.jpg",
@@ -22,7 +22,7 @@ var articlesList = [
   compassionScale: "50"
   },
   {
-  articleUrl: "http://today.law.harvard.edu/feature/seizing-opportunity-alan-jenkins-agenda-social-change/",
+  articleUrl: "https://today.law.harvard.edu/feature/seizing-opportunity-alan-jenkins-agenda-social-change/",
   title: "Seizing the Opportunity",
   description: "Alan Jenkins’ agenda for social change starts with communication.",
   imageUrl: "https://today.law.harvard.edu/wp-content/uploads/2016/04/01_19_16_GlenJenkinsClass_098_MStewartop.op_-768x512.jpg",
@@ -32,7 +32,7 @@ var articlesList = [
   compassionScale: "50"
   },
   {
-  articleUrl: "http://www.aljazeera.com/news/americas/2014/09/yahoo-faced-massive-fine-threat-over-data-2014911232221919500.html",
+  articleUrl: "https://www.aljazeera.com/news/americas/2014/09/yahoo-faced-massive-fine-threat-over-data-2014911232221919500.html",
   title: "Yahoo faced massive fine threat over data",
   description: "Internet giant says it was threatened with fine of $250,000 a day in 2008 if it did not surrender online information.",
   imageUrl: "http://www.aljazeera.com/mritems/imagecache/mbdxxlarge/mritems/Images/2014/9/12//20149122324039734_20.jpg",
@@ -101,24 +101,24 @@ db.TagWord.create(tagWordObj0, function(err, tagWordSuccess) {
   db.Article.create(articlesList, function(err, articles) {
     if (err) {console.log(err);}
     console.log("Created Articles");
-      articlesList.forEach(function (articleData) {
-        var article = new db.Article({
-          articleUrl: articleData.articleUrl,
-          title: articleData.title,
-          description: articleData.description,
-          imageUrl: articleData.imageUrl,
-          author: articleData.author,
-          location: articleData.location,
-          date: articleData.date,
-          compassionScale: articleData.compassionScale
-        });
-          article.save(function(err, savedArticle){
-            if (err) {
-              return console.log(err);
-            }
-            console.log('saved ' + savedArticle.title);
-          });
-      });
+      // articlesList.forEach(function (articleData) {
+      //   var article = new db.Article({
+      //     articleUrl: articleData.articleUrl,
+      //     title: articleData.title,
+      //     description: articleData.description,
+      //     imageUrl: articleData.imageUrl,
+      //     author: articleData.author,
+      //     location: articleData.location,
+      //     date: articleData.date,
+      //     compassionScale: articleData.compassionScale
+      //   });
+      //     article.save(function(err, savedArticle){
+      //       if (err) {
+      //         return console.log(err);
+      //       }
+      //       console.log('saved ' + savedArticle.title);
+      //     });
+      // });
 //////////////for each article join table
       articles.forEach(function(article) {
       var joinTableData = {
@@ -199,16 +199,16 @@ db.TagWord.create(tagWordObj0, function(err, tagWordSuccess) {
 
         db.Article.findOne({title: "Scientists Made a New Map of the Human Brain"}, function(err, scientistsMadeANewMap) {
           db.ArticleTagWord.create({_article: scientistsMadeANewMap._id,
-          _tagWord: tagWordCulture._id}, function fourthJoinMade(err,success){
+          _tagWord: tagWordConnection._id}, function fourthJoinMade(err,success){
             if (err) {console.log(err);}
             console.log(success);
           });
         });
 
       });
-      db.Article.findOne({title: "Munich shooter may have used Facebook post to lure victims"}, function(err, munichShooter) {
+      db.Article.findOne({title: "Scientists Made a New Map of the Human Brain"}, function(err, scientistsMadeANewMap) {
 
-        db.ArticleTagWord.find({article: munichShooter._id}, function allmunichShooter(err,success){
+        db.ArticleTagWord.find({article: scientistsMadeANewMap._id}, function allscientistsMadeANewMap(err,success){
           if (err) {console.log(err);}
           console.log(success.length);
           success.forEach(function(joinEntity){
@@ -226,21 +226,21 @@ db.TagWord.create(tagWordObj0, function(err, tagWordSuccess) {
   });
 
   /*  depopulate and return instructors */
-  // db.TagWord.findOne({
-  //   name: "Communication"
-  // },
-  // function(err, succ) {
-  //   db.ArticleTagWord.find({
-  //     tagWordId: succ._id,
-  //   })
-  //   .populate('articleId')
-  //   .exec(function(err, articles) {
-  //     if (err) {console.log(err);}
-  //     article.forEach( function(el) {
-  //       console.log(el.articleId.title);
-  //     });
-  //   });
-  // });
+  db.TagWord.findOne({
+    name: "Communication"
+  },
+  function(err, succ) {
+    db.ArticleTagWord.find({
+      _tagWord: tagWordSuccess._id,
+    })
+    .populate('articleId')
+    .exec(function(err, articles) {
+      if (err) {console.log(err);}
+      articles.forEach( function(el) {
+        console.log(el.articleId.title);
+      });
+    });
+  });
 
 
 
