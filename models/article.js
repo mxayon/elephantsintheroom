@@ -11,8 +11,7 @@ var ArticleSchema = new Schema ({
   imageUrl: String,
   author: String,
   location: String,
-  date: String,
-  compassionScale: String
+  date: String
 });
 
 
