@@ -1,9 +1,5 @@
 $(document).ready(function() {
   console.log('app.js loaded!');
-  // $.get('/api/articles', onSuccess);
-  // $.get('/api/articles', onSuccessTitle);
-
-  // $.get('/api/articleTagWords/5796ca17a5d21536bad9ad7b/articles', onSuccessMajorIssues);
 
   $.get('/api/articles', onSuccess);
 
