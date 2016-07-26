@@ -42,6 +42,16 @@ var articlesList = [
   compassionScale: "50"
   },
   {
+  articleUrl: "https://mashable.com/2016/07/24/munich-shooting-facebook-post/#HulKR03jAZqb",
+  title: "Munich shooter may have used Facebook post to lure victims",
+  description: "The gunman who murdered nine people at a Munich mall Friday may have attempted to lure young people to the scene of the crime with a fake Facebook post offering free food.",
+  imageUrl: "http://www.aljazeera.com/mritems/imagecache/mbdxxlarge/mritems/Images/2014/9/12//20149122324039734_20.jpg",
+  author: "ARIEL BOGLE",
+  location: "Munich, Germany",
+  date: "July 23, 2016",
+  compassionScale: "1"
+  },
+  {
   articleUrl: "https://orgs.law.harvard.edu/docstudio/films/",
   title: "The Harvard Law Documentary Studio",
   description: "The Harvard Law Documentary Studio aims to produce original documentaries that explore social and policy issues.",
@@ -52,6 +62,8 @@ var articlesList = [
   compassionScale: " "
   }
 ];
+
+
 
 
 var tagWordObj0 = {
@@ -152,6 +164,62 @@ db.TagWord.create(tagWordObj0, function(err, tagWordSuccess) {
           });
         });
       });
+  ///// obj 2
+      db.TagWord.create(tagWordObj2, function handleNewTagWord(err, tagWordCulture){
+        if (err) {console.log(err);}
+        console.log("Tag Word - Culture created.");
+
+        db.Article.findOne({title: "Munich shooter may have used Facebook post to lure victims"}, function(err, munichShooter) {
+          db.ArticleTagWord.create({_article: munichShooter._id,
+          _tagWord: tagWordCulture._id}, function thirdJoinMade(err,success){
+            if (err) {console.log(err);}
+            console.log(success);
+          });
+        });
+
+      });
+      db.Article.findOne({title: "Munich shooter may have used Facebook post to lure victims"}, function(err, munichShooter) {
+
+        db.ArticleTagWord.find({article: munichShooter._id}, function allmunichShooter(err,success){
+          if (err) {console.log(err);}
+          console.log(success.length);
+          success.forEach(function(joinEntity){
+            console.log("SEARCHING WITH : " + joinEntity._tagWord);
+            db.TagWord.findById(joinEntity._tagWord, function(err,succ) {
+              console.log(succ.name);
+            });
+          });
+        });
+      });
+
+///// obj 1
+      db.TagWord.create(tagWordObj1, function handleNewTagWord(err, tagWordConnection){
+        if (err) {console.log(err);}
+        console.log("Tag Word - Connection created.");
+
+        db.Article.findOne({title: "Scientists Made a New Map of the Human Brain"}, function(err, scientistsMadeANewMap) {
+          db.ArticleTagWord.create({_article: scientistsMadeANewMap._id,
+          _tagWord: tagWordCulture._id}, function fourthJoinMade(err,success){
+            if (err) {console.log(err);}
+            console.log(success);
+          });
+        });
+
+      });
+      db.Article.findOne({title: "Munich shooter may have used Facebook post to lure victims"}, function(err, munichShooter) {
+
+        db.ArticleTagWord.find({article: munichShooter._id}, function allmunichShooter(err,success){
+          if (err) {console.log(err);}
+          console.log(success.length);
+          success.forEach(function(joinEntity){
+            console.log("SEARCHING WITH : " + joinEntity._tagWord);
+            db.TagWord.findById(joinEntity._tagWord, function(err,succ) {
+              console.log(succ.name);
+            });
+          });
+        });
+      });
+
 
 
 

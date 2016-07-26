@@ -1,5 +1,5 @@
 // SERVER-SIDE JAVASCRIPT
-
+var db = require('./models');
 //require express in our app
 var express = require('express');
 // generate a new express app and call it 'app'
@@ -37,6 +37,31 @@ app.delete('/api/articles/:articleId', controllers.articles.destroy);
 
 app.put('/api/articles/:articleId', controllers.articles.update);
 
+app.get('/api/articleTagWords/:tagWordId/articles', function (req, res) {
+  db.ArticleTagWord
+    .find({_tagWord: req.params.id})
+    .exec(function(err, artTagWords){
+      console.log(err);
+
+      var article_ids = artTagWords.map(function(a){ return a._article; });
+      db.Article.find({
+        _id: {$in: article_ids}
+      })
+      .exec(function(err, articles){
+        console.log(err);
+        console.log("Articles with Tag Id", req.params.id);
+        console.log(articles);
+        res.json(articles);
+      });
+    });
+  });
+
+app.get('/api/articleTagWords', controllers.articleTagWords.index);
+
+app.get('/api/articleTagWords/:articleTagWordsId', controllers.articleTagWords.show);
+
+app.post('/api/articleTagWords', controllers.articleTagWords.create);
+
 app.get('/api/tagWords', controllers.tagWords.index);
 
 app.get('/api/tagWords/:tagWordId', controllers.tagWords.show);
@@ -46,13 +71,6 @@ app.post('/api/tagWords', controllers.tagWords.create);
 app.delete('/api/tagWords/:tagWordId', controllers.tagWords.destroy);
 
 app.put('/api/tagWords/:tagWordId', controllers.tagWords.update);
-
-app.get('/api/articleTagWords', controllers.articleTagWords.index);
-
-app.get('/api/articleTagWords/:articleTagWordsId', controllers.articleTagWords.show);
-
-app.post('/api/articleTagWords', controllers.articleTagWords.create);
-
 
 //////SERVER
 
