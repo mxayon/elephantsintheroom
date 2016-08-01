@@ -1,3 +1,4 @@
+// Nice documentation! Remember to fill it out completely if you're going to include an api endpoint
 function index(req, res) {
   res.json({
     message: "Welcome to thearticledork!",

@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+// Don't require these files here if you're not going to use them in your schema
 var Article = require('./tagWord.js');
 var ArticleTagWord = require('./articleTagWord.js');
 

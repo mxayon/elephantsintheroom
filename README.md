@@ -1,6 +1,6 @@
 
 ##Elephants In the Room
-**** currently still in demo mode. if you are a developer and need to look at code please keep in mind that TagWords on nav bar are hard coded in with tagword Ids and using a joint table to pull down articles associated through articletagwords table. Hard coded in app.js ***********
+**** currently still in demo mode. if you are a developer and need to look at code please keep in mind that TagWords on nav bar are hard coded in with tagword Ids and using a join table to pull down articles associated through articletagwords table. Hard coded in app.js ***********
 
 Elephants in the room is an article database that tries to cover all hard hitting issues.
 Categories or TagWords are cut down to 4 classifications.
@@ -30,13 +30,13 @@ USER LANDS ON LANDING PAGE
 
 ### Existing Features
 Utilizing RESTful routes
-Using Mongoose to create two databases (articles and tag words) and a joint table to to join them.
+Using Mongoose to create two databases (articles and tag words) and a join table to join them.
 Using Ajax request and assigning event listeners
 Single page app that uses jquery and handlebars templating to load more articles
 Add and delete articles from the Elephants database of articles.
 Show articles by "tagword" category.
-Full Crud on Both databases. Joint table can index and create.
-Easy management of articles and and tagwords through joint table.
+Full Crud on Both databases. Join table can index and create.
+Easy management of articles and and tagwords through join table.
 
 #### Planned Features
 Elephants high hopes is to have a "restore faith in humanity button" based on a compassionScale hard coded in an articles schema.

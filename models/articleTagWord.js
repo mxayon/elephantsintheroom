@@ -4,6 +4,7 @@ var Schema = mongoose.Schema;
 var Article = require('./article');
 var TagWord = require('./tagWord');
 
+// Awesome join table!
 var ArticleTagWordSchema = new Schema({
   _article: {type: Schema.Types.ObjectId,ref: 'Article'},
   _tagWord: {type: Schema.Types.ObjectId, ref: 'TagWord'}

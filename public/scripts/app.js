@@ -1,12 +1,16 @@
 $(document).ready(function() {
   console.log('app.js loaded!');
 
+  // What about onError? Always think about error handling for a better UX
   $.get('/api/articles', onSuccess);
 
   $('.navbar-brand').on('click', function(e){
       $.get('/api/articles', onSuccess);
   });
 
+// This needs troubleshooting. Maybe you could make a 'GET' request to tagWordsController and render all of the
+// tag words using their own Handlebars template, then attach event listeners for each one?
+// This will be a good challenge to revisit.
   $('#majorIssues').on('click', function(e){
     $.get('/api/articleTagWords/579737bf5ee79963e88f8ccd/articles', onSuccessMajorIssues);
   });
@@ -24,39 +28,49 @@ $(document).ready(function() {
   });
 
   $('#article-form form').on('submit', function(e) {
-      e.preventDefault();
-      var formData = $(this).serialize();
-      console.log('formData', formData);
-      $.post('/api/articles', formData, function(articles) {
+    e.preventDefault();
+    var formData = $(this).serialize();
+    console.log('formData', formData);
+    $.post('/api/articles', formData, function(articles) {
+      // Remove sanity check console logs from 'production' (submitted) code
       console.log('article after POST', articles);
       renderArticles(articles);
-      });
-      $(this).trigger("reset");
-      $('form input').val('');
     });
+    $(this).trigger("reset");
+    $('form input').val('');
+  });
 
   $('.articlesShow').on('click', '.deleteBtn', handleDeleteArticleClick);
 
 });
 
+
+// I really like the way that this file is organized. It's helpful to define callbacks outside of 'document ready' -
+// it looks really clean and your functino names are nice and descriptive. Good job!
 function handleDeleteArticleClick(e) {
   e.preventDefault();
- console.log("DELETE CALLED");
- var articleId = $(this).parents('.thumbnail').data('article-id');
- console.log('someone wants to delete article');
- $.ajax ({
-   method: 'DELETE',
-   url: '/api/articles/' + articleId,
-   success: handleDeleteArticleSuccess,
- });
+  console.log("DELETE CALLED");
+  // Nice selector
+  var articleId = $(this).parents('.thumbnail').data('article-id');
+  console.log('someone wants to delete article');
+  $.ajax ({
+    method: 'DELETE',
+    url: '/api/articles/' + articleId,
+    success: handleDeleteArticleSuccess,
+  });
  }
 
 // callback after DELETE /api/albums/:id
 function handleDeleteArticleSuccess(article) {
- var deletedArticleId = article._id;
- console.log('removing the following article from the page');
- $('div[data-article-id=' + deletedArticleId + ']').remove();
+  var deletedArticleId = article._id;
+  console.log('removing the following article from the page');
+  // This doesn't remove the entire article div from the page.
+  // Try adding .parent(), like this:
+  $('div[data-article-id=' + deletedArticleId + ']').parent().remove();
 }
+
+// You have a lot of repetition in the section below. Each of your render functions behaves in a very similar way
+// Is there any way that you could abstract that logic out into one render function?
 
 function onSuccessMajorIssues(articles) {
   console.log('FOUND ALL MajorIssuesArticles', articles);
@@ -79,7 +93,7 @@ function onSuccessCommunication(articles) {
   console.log('FOUND ALL CommunicationArticles', articles);
   articles.forEach(function (article){
     renderCommunication(article);
-});
+  });
 }
 
 function renderCommunication(article) {
@@ -95,7 +109,7 @@ function onSuccessCulture(articles) {
   console.log('FOUND ALL CultureArticles', articles);
   articles.forEach(function (article){
     renderCulture(article);
-});
+  });
 }
 
 function renderCulture(article) {
@@ -111,7 +125,7 @@ function onSuccessConnection(articles) {
   console.log('FOUND ALL ConnectionArticles', articles);
   articles.forEach(function (article){
     renderConnection(article);
-});
+  });
 }
 
 function renderConnection(article) {
@@ -130,10 +144,10 @@ function renderArticles(article) {
   // $currentCarousel.find('articlesList').append(html);
   $('.articlesShow').prepend(html);
 }
-//
-function onSuccess(articles) {
-  console.log('FOUND ALL PIECES', articles);
 
+function onSuccess(articles) {
+  // Remove these sanity check console logs
+  console.log('FOUND ALL PIECES', articles);
   articles.forEach(function (article){
     renderArticles(article);
   });
