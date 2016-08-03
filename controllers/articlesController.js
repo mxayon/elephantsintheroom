@@ -1,11 +1,11 @@
 var db = require('../models');
-// GET /api/albums --> Tunely comment?
+// GET /api/albums --> TODO: Tunely comment? Remove this.
 function index(req, res) {
   db.Article.find({}, function(err, allArticles) {
     // Nice error handling!
     if (err) {
       res.send(404);
-      // This return isn't necessary
+      // TODO: This return isn't necessary. Once the response is sent, the code stops running.
       return;
     }
     res.json(allArticles);
@@ -23,6 +23,7 @@ function show(req, res) {
 }
 
 function create(req, res) {
+  // TODO: Get this up and running- you're on the right track.
   // after creation of article below, you have to find the tag word from the database using the params
   // after you have found the tag word
   // you take the article id and the tag word id and create a new ArticleTagWord using those ids
@@ -31,7 +32,7 @@ function create(req, res) {
   // });
   // Nice use of comments! It's really helpful to leave notes for other devs/your future self
 
-  // Suggestion: maybe you could include a placeholder photo of an article is submitted without an image URL?
+  // TODO: Suggestion: maybe you could include a placeholder photo of an article is submitted without an image URL?
   db.Article.create(req.body, function(err, article) {
     if (err) { console.log('error', err); }
     console.log(article);
@@ -49,6 +50,7 @@ function destroy(req, res) {
 
 function update(req, res) {
   db.Article.findById(req.params.articleId, function(err, foundArticle){
+    // TODO: Remove console logs from production code
     console.log(req.body);
     foundArticle.articleUrl=req.body.articleUrl,
     foundArticle.title=req.body.title,

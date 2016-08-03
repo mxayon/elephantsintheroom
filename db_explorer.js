@@ -1,3 +1,6 @@
+// What's this file? I'd remove it from your repo if it's not part of your application
+// You can add it to .gitignore so it's just saved locally and not pushed up to the remote repo
+
 var db = require('./models');
 var comTagId = "579689b807d052bb948952c2";
 var culTagId = "579689b807d052bb948952c3";

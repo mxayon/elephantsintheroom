@@ -37,6 +37,7 @@ app.delete('/api/articles/:articleId', controllers.articles.destroy);
 
 app.put('/api/articles/:articleId', controllers.articles.update);
 
+// TODO: Move this controller action to your articleTagWordsController
 app.get('/api/articleTagWords/:tagWordId/articles/', function (req, res) {
   db.ArticleTagWord
     .find({_tagWord: req.params.tagWordId})

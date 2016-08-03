@@ -1,14 +1,14 @@
 $(document).ready(function() {
   console.log('app.js loaded!');
 
-  // What about onError? Always think about error handling for a better UX
+  // TODO: What about onError? Always think about error handling for a better UX
   $.get('/api/articles', onSuccess);
 
   $('.navbar-brand').on('click', function(e){
       $.get('/api/articles', onSuccess);
   });
 
-// This needs troubleshooting. Maybe you could make a 'GET' request to tagWordsController and render all of the
+// TODO: This needs troubleshooting. Maybe you could make a 'GET' request to tagWordsController and render all of the
 // tag words using their own Handlebars template, then attach event listeners for each one?
 // This will be a good challenge to revisit.
   $('#majorIssues').on('click', function(e){
@@ -46,7 +46,7 @@ $(document).ready(function() {
 
 
 // I really like the way that this file is organized. It's helpful to define callbacks outside of 'document ready' -
-// it looks really clean and your functino names are nice and descriptive. Good job!
+// it looks really clean and your function names are nice and descriptive. Good job!
 function handleDeleteArticleClick(e) {
   e.preventDefault();
   console.log("DELETE CALLED");
@@ -64,13 +64,13 @@ function handleDeleteArticleClick(e) {
 function handleDeleteArticleSuccess(article) {
   var deletedArticleId = article._id;
   console.log('removing the following article from the page');
-  // This doesn't remove the entire article div from the page.
+  // TODO: This doesn't remove the entire article div from the page.
   // Try adding .parent(), like this:
   $('div[data-article-id=' + deletedArticleId + ']').parent().remove();
 }
 
 // You have a lot of repetition in the section below. Each of your render functions behaves in a very similar way
-// Is there any way that you could abstract that logic out into one render function?
+// TODO: Is there any way that you could abstract that logic out into one render function?
 
 function onSuccessMajorIssues(articles) {
   console.log('FOUND ALL MajorIssuesArticles', articles);

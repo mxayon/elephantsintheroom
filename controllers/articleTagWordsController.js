@@ -1,5 +1,5 @@
 var db = require('../models');
-// GET /api/albums --> Tunely?
+// GET /api/albums --> Tunely? TODO: Remove this
 function index(req, res) {
   db.ArticleTagWord.find({}, function(err, AllArticleTagWords) {
     if (err) {

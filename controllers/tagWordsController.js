@@ -1,5 +1,5 @@
 var db = require('../models');
-// GET /api/albums --> Tunely?
+// GET /api/albums --> TODO: Is this a leftover from Tunely? Please be sure to remove all comments that don't add readability to your code.
 function index(req, res) {
   db.TagWord.find({}, function(err, allTagWords) {
     if (err) {
@@ -41,7 +41,8 @@ function update(req, res) {
     foundTagWord.save(function(err, updatedTagWord) {
       if (err) {
        console.log("create error: " + err);
-      } res.json(updatedTagWord);
+      }
+      res.json(updatedTagWord);
     });
   });
 }
