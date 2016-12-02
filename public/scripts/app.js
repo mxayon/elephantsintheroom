@@ -37,6 +37,7 @@ $(document).ready(function() {
 
   $('.articlesShow').on('click', '.deleteBtn', handleDeleteArticleClick);
 
+
 });
 
 function handleDeleteArticleClick(e) {

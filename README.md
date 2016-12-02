@@ -1,6 +1,7 @@
 
-##Elephants In the Room
-**** currently still in demo mode. if you are a developer and need to look at code please keep in mind that TagWords on nav bar are hard coded in with tagword Ids and using a joint table to pull down articles associated through articletagwords table. Hard coded in app.js ***********
+#Elephants In the Room
+### https://elephantsintheroom.herokuapp.com/
+* ** currently still in demo mode. if you are a developer and need to look at code please keep in mind that TagWords on nav bar are hard coded in with tagword Ids and using a joint table to pull down articles associated through articletagwords table. Hard coded in app.js **
 
 Elephants in the room is an article database that tries to cover all hard hitting issues.
 Categories or TagWords are cut down to 4 classifications.
@@ -8,18 +9,14 @@ Major Issues, Communication, Culture and Connection.
 Based on an article for social change (included in the articles), and the Three C's that can change the world.
 
 
-### Technologies Used
-JAVASCRIPT
-jQuery
-Mongoose, MongoDB
-handlebarsJS
-HTML / CSS
-Bootstrap : Media thumbnails, grid system
+## Technologies Used
+HTML, CSS
+JavaScript, jQuery
+HandlebarsJS, Bootstrap
+Express, Mongoose, MongoDB
 
 
-heroku project link : https://frozen-plains-43549.herokuapp.com/
-
-![elephantsintheroom:](http://i.imgur.com/B2b6s8F.png "elephants")
+### ![elephantsintheroom:](http://i.imgur.com/B2b6s8F.png "elephants")
 
 USER LANDS ON LANDING PAGE
 - User is greeted Articles and Navigation Bar located on the top.
