@@ -1,7 +1,7 @@
 
 #Elephants In the Room
 ### [Elephants In The Room](https://elephantsintheroom.herokuapp.com/)
-**currently still in demo mode. if you are a developer and need to look at code please keep in mind that TagWords on nav bar are hard coded in with tagword Ids and using a joint table to pull down articles associated through articletagwords table. Hard coded in app.js**
+**currently still in demo mode. if you are a developer and need to look at code please keep in mind that TagWords on nav bar are hard coded in with tagword Ids and using a join table to pull down articles associated through articletagwords table. Hard coded in app.js**
 
 * Inspired by how the news feed on facebook can tend to be one sided, click bait-y and lacking of facts. As well as how it is the most commonly used platform people use as a main news resource.
 
@@ -16,10 +16,10 @@ While looking for accurate ways to fairly rate and categorize articles, I came a
 
 - an instrument that measures the happiness of large populations in real time. It uses online expressions from Twitter posts measured over time in real life events.
 
-Based on the way Hedonometer ranked each word to a happiness score:
+The way Hedonometer ranked each word to a happiness score:
  >http://hedonometer.org/words.html
 
-- that proves how the suggestiveness of words can sway the emotions of the reader. Subtly influencing once opinions before confirming with facts.
+-proves how the suggestiveness of words can sway the emotions of the reader. Subtly influencing once opinions before confirming with facts. When considering articles to be  featured on ETR would prioritize facts and an objective stand point, as well as articles we can learn from, that are beneficial and that do not lack depth.
 
 Across cultures, the commitment to happiness is a more of a western concept.
 > https://hbr.org/2012/01/the-history-of-happiness
@@ -48,15 +48,15 @@ USER LANDS ON LANDING PAGE
 
 
 ### Existing Features
-Utilizing RESTful routes
-Using Mongoose to create two databases (articles and tag words) and a joint table to to join them.
-Using Ajax request and assigning event listeners
-Single page app that uses jquery and handlebars templating to load more articles
-Add and delete articles from the Elephants database of articles.
-Show articles by "tagword" category.
-Full Crud on Both databases. Joint table can index and create.
-Easy management of articles and and tagwords through joint table.
+- [X] Utilizing RESTful routes
+- [X] Using Mongoose to create two databases (articles and tag words) and a join table to to join them.
+- [X] Using Ajax request and assigning event listeners
+- [X] Single page app that uses jquery and handlebars templating to load more articles
+- [X] Add and delete articles from the Elephants database of articles.
+- [X] Show articles by "tagword" category.
+- [X] Full Crud on Both databases. Join table can index and create.
+- [X] Easy management of articles and and tagwords through join table.
 
 #### Planned Features
-Google Maps integration
-Admin User
+- [ ] Google Maps integration
+- [ ] Admin User
