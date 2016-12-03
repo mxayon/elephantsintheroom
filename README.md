@@ -7,7 +7,7 @@
 
 Elephants in the Room hopes to centralize a database of articles that may be difficult to discuss but important to humanity.
 
-By offering 3 categories of solutions: Communication, Culture and Connection, in which empathy is demonstrated or defined.
+Aside from Major Issues, ETR offers 3 categories of solution articles: Communication, Culture and Connection, in which empathy is demonstrated or defined.
 
 Elephants in the Room is not meant to filter news but as a platform to present and brainstorm for solutions.
 
