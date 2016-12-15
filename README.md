@@ -3,7 +3,7 @@
 ### [Elephants In The Room](https://elephantsintheroom.herokuapp.com/)
 **currently still in demo mode. if you are a developer and need to look at code please keep in mind that TagWords on nav bar are hard coded in with tagword Ids and using a join table to pull down articles associated through articletagwords table. Hard coded in app.js**
 
-* Inspired by how the news feed on facebook can tend to be one sided, click bait-y and lacking of facts. As well as how it is the most commonly used platform people use as a main news resource.
+* Inspired by how some articles on the news feed can tend to be one sided, click bait-y and lacking of facts. And how news should be more widely discussed.
 
 Elephants in the Room hopes to centralize a database of articles that may be difficult to discuss but important to humanity.
 
@@ -14,7 +14,7 @@ Elephants in the Room is not meant to filter news but as a platform to present a
 While looking for accurate ways to fairly rate and categorize articles, I came across
  >http://hedonometer.org
 
-- an instrument that measures the happiness of large populations in real time. It uses online expressions from Twitter posts measured over time in real life events.
+- an instrument that measures the happiness of large populations in real time. It uses online expressions from hashtags measured over time in real life events.
 
 The way Hedonometer ranked each word to a happiness score:
  >http://hedonometer.org/words.html
