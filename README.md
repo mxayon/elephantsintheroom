@@ -1,15 +1,15 @@
 
 #Elephants In the Room
 ### [Elephants In The Room](https://elephantsintheroom.herokuapp.com/)
-**currently still in demo mode. if you are a developer and need to look at code please keep in mind that TagWords on nav bar are hard coded in with tagword Ids and using a join table to pull down articles associated through articletagwords table. Hard coded in app.js**
+**Currently still in demo mode. if you are a developer and need to look at code please keep in mind that TagWords on nav bar are hard coded in with tagword Ids and using a join table to pull down articles associated through articletagwords table. Hard coded in app.js**
 
-* Inspired by how some articles on the news feed can tend to be one sided, click bait-y and lacking of facts. And how news should be more widely discussed.
+* Inspired by how articles can hold a lot of influence on people, but people only seem to be drawn to what they want to hear.
 
 Elephants in the Room hopes to centralize a database of articles that may be difficult to discuss but important to humanity.
 
 Aside from Major Issues, ETR offers 3 categories of solution articles: Communication, Culture and Connection, in which empathy is demonstrated or defined.
 
-Elephants in the Room is not meant to filter news but as a platform to present and brainstorm for solutions.
+Elephants in the Room is not meant to censor news but as a platform to present and brainstorm for solutions.
 
 While looking for accurate ways to fairly rate and categorize articles, I came across
  >http://hedonometer.org
